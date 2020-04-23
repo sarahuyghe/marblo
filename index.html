@@ -8,62 +8,72 @@
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css" />
   <title>Marblo</title>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li class="active">Introductie</li>
-        <li>Over marblo</li>
-        <li>Assortiment</li>
-        <li>Voordelen</li>
-        <li>Contact</li>
-        <li class="button winkel">Winkeluitbater</li>
+<body data-spy="scroll" data-target="#navbar" >
+  <header class="fixed-top">
+    <nav  class="navbar justify-content-end " id="navbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link " href="#introductie">Introductie</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#over">Over marblo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#assortiment">Assortiment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#voordelen">Voordelen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link button winkel" href="#">Winkeluitbater</a></li>
+        <div class="nav-item lang">
+          <button class="active">NL</button>
+          <button>FR</button>
+        </div>
       </ul>
-    </nav>
     <ul class="lang">
-      <li class="active">NL</li>
-      <li>FR</li>
+    
     </ul>
+  </nav>
   </header>
-  <main>
-    <section>
-      <img src="" alt="">
-      <img src="" alt="">
-      <h2>Uw meester in</br>
-        culinaire bereidingen</h2>
+  <main >
+    <section class="banner" id="introductie">
+      <img src="./assets/bordBeeld.png" alt="decoration plank" class="decorationImg">
+      <div>
+        <img src="./assets/logo.png" width="400" alt="logo marblo">
+        <img src="./assets/leaf.png" alt="lead decoration">
+        <h2>Uw meester in</br>
+          culinaire bereidingen</h2>
+      </div>
     </section>
-    <section>
+    <section class="mx-auto about" id="over">
       <h1 class="center">Over Marblo</h1>
-      <div>
-        <img src="" alt="">
-        <div>
-          <p>Marblo is ontstaan vanuit een stijgende vraag naar kant-en-klare gerechten door de consument. Om aan deze
-            vraag te voldoen is ervaring, vakmanschap, ruimte en een selectie van verfijnde, ambachtelijke producten
-            noodzakelijk.</p>
-          <p>De sterkte van Marblo is dat alles in eigen beheer blijft. Het bedrijf zet de lijn verder van “eigen
-            slagerij en visverwerking” tot productie van artisanale dagschotels. Een uniek concept met oog voor
-            kwaliteit en vakmanschap.</p>
-        </div>
+      <img src="./assets/titelBrush.png" alt="" class="brushTitel">
+      <div class="row mx-5">
+      <img src="./assets/aboutImage.png" alt="aanbod in winkel" class="col" >
+      <div class="col">
+        <p>Marblo is ontstaan vanuit een stijgende vraag naar kant-en-klare gerechten door de consument. Om aan deze
+          vraag te voldoen is ervaring, vakmanschap, ruimte en een selectie van verfijnde, ambachtelijke producten
+          noodzakelijk.</p>
+        <p>De sterkte van Marblo is dat alles in eigen beheer blijft. Het bedrijf zet de lijn verder van “eigen
+          slagerij en visverwerking” tot productie van artisanale dagschotels. Een uniek concept met oog voor
+          kwaliteit en vakmanschap.</p>
       </div>
-      <div>
-        <div>
-          <p>Een vast team van gedreven medewerkers bereidt dagelijks kwalitatieve en betaalbare gerechten die een brede
-            oplossing bieden aan elke traiteurafdeling in een slagerij en supermarkt. Dit concept kan niet zonder de
-            garantie te bieden dat Marblo enkel kiest voor een selectie van kwalitatieve grondstoffen en vakkundige
-            verwerking en een constante bewaking van de voedselveiligheid.</p>
-          <p>Kiest u voor Marblo, dan kiest u voor een topproduct bereid in een bedrijf dat voldoet aan alle laatste
-            HACCP-normen. </p>
-          <iframe src="https://player.vimeo.com/video/108018156?color=ffffff" width="539" height="303" frameborder="0"
-            allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <p>Een vast team van gedreven medewerkers bereidt dagelijks kwalitatieve en betaalbare gerechten die een brede
+          oplossing bieden aan elke traiteurafdeling in een slagerij en supermarkt. Dit concept kan niet zonder de
+          garantie te bieden dat Marblo enkel kiest voor een selectie van kwalitatieve grondstoffen en vakkundige
+          verwerking en een constante bewaking van de voedselveiligheid.</p>
+        <p>Kiest u voor Marblo, dan kiest u voor een topproduct bereid in een bedrijf dat voldoet aan alle laatste
+          HACCP-normen. </p>
+      </div>
+      <iframe src="https://player.vimeo.com/video/376837881" width="539" height="303" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen class="col"></iframe>
       </div>
     </section>
-    <section class="change-bg">
+    <section class="change-bg" id="assortiment">
       <h1 class="center">Ontdek ons assortiment</h1>
+      <img src="./assets/titelBrush.png" alt="" class="brushTitel">
       <div></div>
       <div>
         <ul class="assortiment">
@@ -80,8 +90,9 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="voordelen">
       <h1>Enkele interessante voordelen</h1>
+      <img src="./assets/titelBrush.png" alt="" class="brushTitel">
       <ul class="voordelen">
         <li>Marblo voorziet ruime porties per gerecht</li>
         <li>Er wordt steeds met <span class="bold">dagverse</span> producten gewerkt</li>
@@ -92,21 +103,22 @@
         <li>…</li>
       </ul>
     </section>
-    <section class="change-bg">
+    <section class="change-bg" id="contact">
       <h1>Historiek</h1>
-      <div>
-        <div>
+      <img src="./assets/titelBrush.png" alt="" class="brushTitel">
+      <div class="row">
+        <div  class="col">
           <h3>2012</h3>
           <p><span class="bold">Marblo</span> wordt opgestart in Petegem.</p>
         </div>
-        <div>
+        <div class="col">
           <h3>2015</h3>
           <p>De samenwerking tussen <span class="bold">Willy Naessens Group</span> en Blockeel is een feit. De firma
             Franky Fresh
             Food, onderdeel
             van de Willy Naessens Group, staat in voor de distributie van de dagverse dagschotels.</p>
         </div>
-        <div>
+        <div class="col">
           <h3>2016</h3>
           <p>Aangezien de productieruimte in Wortegem-Petegem te klein werd, verhuisde Marblo in 2016 naar
             <span class="bold">Waregem</span>. Een
@@ -118,6 +130,7 @@
     </section>
     <section>
       <h1 class="center">Interesse? Neem contact op!</h1>
+      <img src="./assets/titelBrush.png" alt="" class="brushTitel">
       <form action="">
         <div>
           <label for="">Volledige naam</label>
@@ -157,9 +170,9 @@
     </section>
   </main>
   <footer>
-    <section>
-      <div>
-        <img src="" alt="">
+    <section class="row">
+      <div class="col">
+        <img src="./assets/logo.png" alt="logo marblo" width="150">
         <div>
           <p>Eugène Bekaertlaan 57</p>
           <p>8790 Waregem, België</p>
@@ -169,9 +182,10 @@
           <p>F: +32 (0)56 19 45 15</p>
         </div>
       </div>
-      <div>
-        <button id="toTop">To top</button>
-        <img src="" alt="">
+      <div class="col text-right">
+        <!-- <button id="toTop">To top</button> -->
+          <img  src="./assets/arrow.svg" alt="arrow" width="10" class="toTop" id="toTop">
+        
         <div>
           <a href="https://www.willynaessens.be/nl/disclaimer/">Algemene voorwaarden</a>
           <a href="https://www.willynaessens.be/nl/disclaimer/">Privacybeleid</a>
@@ -182,7 +196,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="digital text-center">
       <p>website gemaakt door <a href="https://digitalastronaut.be/">digitalastronaut.be</a></p>
     </section>
   </footer>

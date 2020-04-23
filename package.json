@@ -11,5 +11,8 @@
 		"grunt-contrib-nodeunit": "^2.1.0",
 		"grunt-contrib-uglify": "^4.0.1",
 		"grunt-contrib-watch": "^1.1.0"
+	},
+	"dependencies": {
+		"bootstrap": "^4.4.1"
 	}
 }
