@@ -42,18 +42,22 @@ nav {
   line-height: 100%;
   text-decoration: none; }
   nav .active {
-    color: #e33253; }
+    color: #e33253;
+    transition: all 0.5s; }
 
-.lang button {
+button {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   line-height: 15px;
   color: #a6a69e;
-  background-repeat: no-repeat;
+  background: none;
   border: none;
   overflow: hidden;
   outline: none; }
-  .lang button .active {
+  button:hover {
+    color: #1d1d1b;
+    transition: all 0.5s; }
+  button.activeLang {
     color: #1d1d1b; }
 
 main section {
@@ -171,11 +175,7 @@ input:focus {
   background-repeat: no-repeat;
   background-size: cover;
   height: 950px;
-  display: grid;
-  grid-template-columns: auto 750px;
   padding: 0; }
-  .banner .decorationImg {
-    width: 100%; }
   .banner div {
     display: flex;
     flex-direction: column;
@@ -192,7 +192,8 @@ input:focus {
       padding: 10px 0; }
 
 header {
-  padding-top: 28px; }
+  padding-top: 28px;
+  transition: all 0.5s; }
 
 .nav {
   align-items: center;
@@ -212,25 +213,82 @@ header {
     padding-left: 20px;
     padding-right: 20px; }
 
+.nav-item .active {
+  color: #e33253;
+  border-bottom: #e33253 solid 2px;
+  padding-bottom: 8px; }
+
+.nav-link:hover {
+  color: #e33253;
+  transition: all 0.5s; }
+
 .toTop {
   border-radius: 50%;
   background-color: #807968;
   height: 50px;
-  width: 50px; }
+  width: 50px;
+  padding: 15px; }
 
 footer {
   background-image: url(./../assets/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 180px; }
+  padding-top: 180px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  color: #524b39;
+  font-weight: 700; }
+  footer .col div {
+    margin: 32px 0; }
+  footer p {
+    margin-bottom: 0; }
+  footer a {
+    text-decoration: underline;
+    color: #524b39;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 137%; }
+  footer .pricavy {
+    display: flex;
+    flex-direction: column; }
+
+.testing {
+  padding-bottom: 100px; }
 
 .digital {
   background-color: #fefdfb;
   color: #aba18a;
-  margin-top: 100px;
-  height: 50px; }
+  height: 50px;
+  font-weight: 400;
+  padding-top: 20px; }
   .digital a {
     color: #aba18a;
     text-decoration: underline; }
+
+.bg-navbar {
+  background-color: white;
+  transition: all 0.5s;
+  padding: 0; }
+
+.winkel:hover {
+  background-color: #1d1d1b;
+  color: #fefdfb;
+  transition: all 1s; }
+
+.hide {
+  visibility: hidden;
+  padding-left: 25px;
+  padding: 5px; }
+
+.fadeIn {
+  -webkit-animation: animat_show 1.5s;
+  animation: animat_show 1.5s;
+  visibility: visible !important; }
+
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
