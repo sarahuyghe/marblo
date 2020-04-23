@@ -2,7 +2,109 @@ body {
   background-color: #FEFDFB;
   color: #524B39; }
 
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 140%; }
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-style: bold;
+  font-size: 6rem;
+  line-height: 76px; }
+
+h2 {
+  font-family: 'Caveat', cursive;
+  font-style: bold;
+  font-size: 3.4rem;
+  line-height: 34px;
+  line-height: 79%;
+  text-align: center;
+  letter-spacing: 5%; }
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-style: bold;
+  font-size: 3.6rem;
+  line-height: 45px;
+  line-height: 100%; }
+
+nav {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #1D1D1B;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 100%;
+  text-decoration: none; }
+  nav .active {
+    color: #E33253; }
+
+.lang {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #A6A69E; }
+  .lang .active {
+    color: #1D1D1B; }
+
+input {
+  border: solid #F8F0E2 1px;
+  border-radius: 25px;
+  background-color: rgba(248, 240, 226, 0.33);
+  height: 50px;
+  width: 350px; }
+
+::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+  line-height: 50px;
+  line-height: 250%;
+  color: rgba(171, 161, 138, 0.5); }
+
+.button {
+  background-color: #E33253;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: #FEFDFB; }
+  .button .winkel {
+    font-style: bold;
+    font-size: 1.4rem;
+    line-height: 40px;
+    line-height: 229%;
+    border-radius: 20px;
+    width: 99px;
+    height: 40px; }
+  .button .submit {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 100%;
+    border-radius: 30px;
+    width: 200px;
+    height: 60px; }
+
+.bold {
+  font-style: bold; }
+
 .change-bg {
   background-color: #F8F0E2; }
+
+.assortiment {
+  font-family: 'Caveat', cursive; }
+  .assortiment li {
+    color: #ABA18A;
+    font-size: 2rem;
+    line-height: 25px; }
+  .assortiment .active {
+    font-size: 4.8rem;
+    line-height: 6rem;
+    color: #524B39; }
+
+.voordelen li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+  color: #524B39; }
 
 /*# sourceMappingURL=style.css.map */

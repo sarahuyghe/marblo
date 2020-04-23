@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@400;500;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <title>Marblo</title>
 </head>
@@ -13,15 +15,17 @@
 <body>
   <header>
     <nav>
-      <li>Introductie</li>
-      <li>Over marblo</li>
-      <li>Assortiment</li>
-      <li>Voordelen</li>
-      <li>Contact</li>
-      <li>Winkeluitbater</li>
+      <ul>
+        <li class="active">Introductie</li>
+        <li>Over marblo</li>
+        <li>Assortiment</li>
+        <li>Voordelen</li>
+        <li>Contact</li>
+        <li class="button winkel">Winkeluitbater</li>
+      </ul>
     </nav>
-    <ul>
-      <li>NL</li>
+    <ul class="lang">
+      <li class="active">NL</li>
       <li>FR</li>
     </ul>
   </header>
@@ -62,10 +66,10 @@
       <h1>Ontdek ons assortiment</h1>
       <div></div>
       <div>
-        <ul>
+        <ul class="assortiment">
           <li>Dagschotels vlees</li>
           <li>Dagschotels vis</li>
-          <li>Pastagerechten</li>
+          <li class="active">Pastagerechten</li>
           <li>Vlaamse klassiekers</li>
           <li>Kaas</li>
           <li>Tapas</li>
@@ -78,12 +82,13 @@
     </section>
     <section>
       <h1>Enkele interessante voordelen</h1>
-      <ul>
+      <ul class="voordelen">
         <li>Marblo voorziet ruime porties per gerecht</li>
-        <li>Er wordt steeds met dagverse producten gewerkt</li>
+        <li>Er wordt steeds met <span class="bold">dagverse</span> producten gewerkt</li>
         <li>verpakking is microgolf- en ovenbestendig tot 160° C</li>
         <li>Elk gerecht is een unieke presentatie met aandacht voor kleur en eenvormigheid</li>
-        <li>Marblo werkt met een ruim assortiment van runners, seizoensproducten en themaproducten</li>
+        <li>Marblo werkt met een <span class="bold">ruim assortiment</span> van runners, seizoensproducten en
+          themaproducten</li>
         <li>…</li>
       </ul>
     </section>
@@ -92,16 +97,19 @@
       <div>
         <div>
           <h3>2012</h3>
-          <p>Marblo wordt opgestart in Petegem.</p>
+          <p><span class="bold">Marblo</span> wordt opgestart in Petegem.</p>
         </div>
         <div>
           <h3>2015</h3>
-          <p>De samenwerking tussen Willy Naessens Group en Blockeel is een feit. De firma Franky Fresh Food, onderdeel
+          <p>De samenwerking tussen <span class="bold">Willy Naessens Group</span> en Blockeel is een feit. De firma
+            Franky Fresh
+            Food, onderdeel
             van de Willy Naessens Group, staat in voor de distributie van de dagverse dagschotels.</p>
         </div>
         <div>
           <h3>2016</h3>
-          <p>Aangezien de productieruimte in Wortegem-Petegem te klein werd, verhuisde Marblo in 2016 naar Waregem. Een
+          <p>Aangezien de productieruimte in Wortegem-Petegem te klein werd, verhuisde Marblo in 2016 naar
+            <span class="bold">Waregem</span>. Een
             volledig nieuwe installatie met de nieuwste en modernste machines in een ruimte van 2500 m2 laat Marblo toe
             om verder mee te groeien in de markt van bereide gerechten. Met deze investering is 3.5 miljoen euro
             gemoeid.</p>
@@ -137,7 +145,7 @@
           <input type="checkbox">
           <label for="">Ik heb het <a href="https://www.willynaessens.be/nl/disclaimer/">privacybeleid</a> gelezen en ga
             akkoord</label>
-          <input type="submit" value="Versturen">
+          <input type="submit" value="Versturen" class="button submit">
         </div>
       </form>
     </section>
