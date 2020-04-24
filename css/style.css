@@ -92,9 +92,61 @@ main section {
   background-color: rgba(248, 240, 226, 0.33);
   height: 50px; }
 
-input:focus {
-  padding-left: 25px;
-  color: #807968; }
+.form-check input[type="checkbox"] {
+  opacity: 0; }
+
+.form-check input[type="checkbox"] + label::after {
+  opacity: 0; }
+
+.form-check input[type="checkbox"]:checked + label::after {
+  opacity: 1; }
+
+.form-check input[type="checkbox"]:focus + label::before {
+  outline: #3b99fc auto 5px; }
+
+.form-check label {
+  font-weight: normal;
+  position: relative;
+  padding-left: 40px; }
+  .form-check label a {
+    color: #E33253;
+    text-decoration: underline; }
+
+.form-check label::before,
+.form-check label::after {
+  position: absolute;
+  content: "";
+  display: inline-block; }
+
+.form-check input {
+  padding-left: 20px; }
+
+.form-check label::before {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #F8F0E2;
+  border-radius: 5px;
+  background: rgba(248, 240, 226, 0.33);
+  left: 0; }
+
+.form-check label:after {
+  background-image: url(./../assets/checkForm.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 7.5px;
+  width: 15px;
+  height: 11px;
+  background-size: 15px 11px;
+  top: 10px; }
+
+input[type="text"]:focus,
+input[type="checkbox"]:focus,
+textarea:focus {
+  border-color: #807968;
+  outline: 0 none;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
+  background: rgba(248, 240, 226, 0.66);
+  font-weight: 700; }
 
 ::placeholder {
   font-family: "Quicksand", sans-serif;
@@ -108,20 +160,14 @@ input:focus {
   font-family: "Quicksand", sans-serif;
   text-align: center;
   color: #fefdfb; }
-  .button .winkel {
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 40px;
-    border-radius: 20px;
-    width: 99px;
-    height: 40px; }
-  .button .submit {
-    font-weight: 500;
-    font-size: 2.2rem;
-    line-height: 28px;
-    border-radius: 30px;
-    width: 200px;
-    height: 60px; }
+
+.submit {
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 28px;
+  border-radius: 30px;
+  width: 200px;
+  height: 60px; }
 
 .bold {
   font-weight: 700; }
@@ -132,6 +178,52 @@ input:focus {
 
 .change-bg {
   background-color: #f8f0e2; }
+
+.carousel {
+  display: flex;
+  align-content: center; }
+
+.carousel-indicators {
+  display: flex;
+  flex-direction: column; }
+
+.buttonSlider {
+  background-color: #524B39;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #F8F0E2;
+  border-radius: 50%;
+  opacity: 1; }
+
+.carousel-indicators li {
+  font-family: "Caveat", cursive;
+  color: #aba18a;
+  font-size: 2rem;
+  line-height: 25px;
+  position: relative;
+  text-indent: 0;
+  width: 100%;
+  margin: 10px 0; }
+  .carousel-indicators li .active {
+    font-size: 4.8rem;
+    line-height: 6rem;
+    color: #524b39; }
+
+.carousel-indicators li::after {
+  display: block;
+  -ms-flex: none;
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: none;
+  border: 0;
+  color: #aba18a;
+  font-size: 2rem;
+  line-height: 25px;
+  font-weight: 400;
+  text-indent: 1;
+  content: ""; }
 
 .assortiment {
   font-family: "Caveat", cursive; }
@@ -206,15 +298,15 @@ header {
 .nav-link {
   color: #1d1d1b;
   margin: 0 20px; }
-  .nav-link.button {
-    color: #fefdfb;
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 40px;
-    border-radius: 20px;
-    height: 40px;
-    padding-left: 20px;
-    padding-right: 20px; }
+
+.winkel {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 30px;
+  border-radius: 20px;
+  width: 140px;
+  height: 40px;
+  color: #fefdfb; }
 
 .nav-item .active {
   color: #e33253;
@@ -253,6 +345,8 @@ footer {
   footer .pricavy {
     display: flex;
     flex-direction: column; }
+  footer .footer-info {
+    padding-bottom: 100px; }
 
 .testing {
   padding-bottom: 100px; }
@@ -271,7 +365,8 @@ footer {
   transition: all 0.5s;
   padding: 0; }
 
-.winkel:hover {
+.winkel:hover,
+.submit:hover {
   background-color: #1d1d1b;
   color: #fefdfb;
   transition: all 1s; }

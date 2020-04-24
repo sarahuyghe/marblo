@@ -19,18 +19,18 @@
     }
   }
 
-  const slideCarousel = e => {
-    $number = e.currentTarget.getAttribute(`data-slide-to`)
-    $carouselItems.forEach(item => item.classList.remove(`active`))
-    e.currentTarget.classList.add(`active`)
-    $carouselImages.forEach(item => {
-      item.classList.remove('active')
-      if (item.getAttribute(`data-slide-to`) === $number) {
-        item.classList.add('active')
-      }
-      item.getAttribute(`data-slide-to`)
-    })
-  }
+  // const slideCarousel = e => {
+  //   $number = e.currentTarget.getAttribute(`data-slide-to`)
+  //   $carouselItems.forEach(item => item.classList.remove(`active`))
+  //   e.currentTarget.classList.add(`active`)
+  //   $carouselImages.forEach(item => {
+  //     item.classList.remove('active')
+  //     if (item.getAttribute(`data-slide-to`) === $number) {
+  //       item.classList.add('active')
+  //     }
+  //     item.getAttribute(`data-slide-to`)
+  //   })
+  // }
 
   const init = () => {
     window.addEventListener(`scroll`, scrollFunction)
