@@ -259,10 +259,8 @@ textarea:focus {
 }
 
 .brushesBorder {
-
   border-top: 100px solid;
   // border: 100px solid;
-
   // pading-top: 140px;
   border-image: url(./../assets/brushTop.png) 150 stretch;
 
@@ -598,4 +596,9 @@ footer {
 .brush-border {
   width: 100%;
 
+}
+
+
+.logo {
+  padding-left: 40px;
 }
