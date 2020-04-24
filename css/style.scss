@@ -15,6 +15,22 @@ h1 {
   font-weight: 700;
   font-size: 6rem;
   line-height: 76px;
+  margin-bottom: 100px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 27px;
+  position: absolute;
+  right: -80px;
+  top: 100%;
+  background-image: url(./../assets/titelBrush.png);
+  background-repeat: no-repeat;
+
 }
 
 h2 {
@@ -72,6 +88,10 @@ main section {
   padding: 134px 0;
 }
 
+.form-control .message {
+  height: 150px
+}
+
 form {
   // width: 730px;
 
@@ -102,6 +122,10 @@ form {
   // }
 }
 
+.form-row {
+  margin-top: 18px;
+}
+
 .form-group label {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
@@ -112,6 +136,7 @@ form {
   text-transform: uppercase;
   padding-left: 25px;
 }
+
 
 .form-control {
   border: solid #f8f0e2 1px;
@@ -202,8 +227,28 @@ input:focus {
 }
 
 .brushTitel {
+  // position: absolute;
   display: inline-block;
-  text-align: right;
+  // text-align: right;
+  // margin: -15px 0;
+  width: 281px;
+  height: 27px;
+  margin-top: 60px;
+  margin-left: -230px;
+}
+
+
+.voordelen li::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 25%;
+  left: 0;
+  width: 11px;
+  height: 8px;
+  // margin-right: 4px;
+  background: url(./../assets/check.svg);
+  // background-size: 10px 8px
 }
 
 .voordelen li {
@@ -215,32 +260,18 @@ input:focus {
   position: relative;
   margin: 25px 0;
   line-height: 25px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
-.voordelen li::before {
-  display: block;
-  position: absolute;
-  // top: 0;
-  // left: 0;
-  width: 48px;
-  height: 37px;
-  // margin-right: 4px;
-  background: url(./../assets/check.svg);
-}
+
 
 .banner {
   background-image: url(./../assets/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 950px;
-  // display: grid;
-  // grid-template-columns: auto 750px;
   padding: 0;
 
-  // & .decorationImg {
-  // 	width: 100%;
-  // }
 
   & div {
     display: flex;
@@ -415,4 +446,25 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+.timeline-item {
+  border-top: solid 1px #ABA18A;
+
+  & h3 {
+    position: absolute;
+    top: -20px;
+    padding: 0 23px;
+    background-color: #F8F0E2;
+  }
+
+  & div {
+    margin-top: 30px;
+    padding-left: 23px;
+  }
+}
+
+.brush-border {
+  width: 100%;
+
 }

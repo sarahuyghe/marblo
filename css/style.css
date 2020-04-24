@@ -11,7 +11,21 @@ h1 {
   font-family: "Caveat", cursive;
   font-weight: 700;
   font-size: 6rem;
-  line-height: 76px; }
+  line-height: 76px;
+  margin-bottom: 100px;
+  position: relative;
+  width: fit-content; }
+
+h1::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 27px;
+  position: absolute;
+  right: -80px;
+  top: 100%;
+  background-image: url(./../assets/titelBrush.png);
+  background-repeat: no-repeat; }
 
 h2 {
   font-family: "Caveat", cursive;
@@ -55,6 +69,12 @@ button {
 
 main section {
   padding: 134px 0; }
+
+.form-control .message {
+  height: 150px; }
+
+.form-row {
+  margin-top: 18px; }
 
 .form-group label {
   font-family: "Quicksand", sans-serif;
@@ -129,7 +149,20 @@ input:focus {
 
 .brushTitel {
   display: inline-block;
-  text-align: right; }
+  width: 281px;
+  height: 27px;
+  margin-top: 60px;
+  margin-left: -230px; }
+
+.voordelen li::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 25%;
+  left: 0;
+  width: 11px;
+  height: 8px;
+  background: url(./../assets/check.svg); }
 
 .voordelen li {
   font-family: "Quicksand", sans-serif;
@@ -139,14 +172,7 @@ input:focus {
   position: relative;
   margin: 25px 0;
   line-height: 25px;
-  padding-left: 50px; }
-
-.voordelen li::before {
-  display: block;
-  position: absolute;
-  width: 48px;
-  height: 37px;
-  background: url(./../assets/check.svg); }
+  padding-left: 30px; }
 
 .banner {
   background-image: url(./../assets/bg.png);
@@ -265,5 +291,19 @@ footer {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.timeline-item {
+  border-top: solid 1px #ABA18A; }
+  .timeline-item h3 {
+    position: absolute;
+    top: -20px;
+    padding: 0 23px;
+    background-color: #F8F0E2; }
+  .timeline-item div {
+    margin-top: 30px;
+    padding-left: 23px; }
+
+.brush-border {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
