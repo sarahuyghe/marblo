@@ -1,6 +1,6 @@
 {
   const $topButton = document.querySelector("#toTop")
-  const $nav = document.querySelector('header')
+  const $nav = document.querySelector('.navbar')
   const $logo = document.querySelector('#logo')
   const $carouselItems = document.querySelectorAll('#carousel-itemText')
   const $carouselImages = document.querySelectorAll('.carousel-item')
