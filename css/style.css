@@ -1,56 +1,68 @@
-body {
-  background-color: #fefdfb;
-  color: #524b39; }
+@import url(./reset.css);
+:root {
+  --color-black: #1D1D1B;
+  --color-white: #FEFDFB;
+  --color-secondary: #ABA18A;
+  --color-primary: #524B39;
+  --color-accent: #E33253;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+  /* stylelint-disable */
+  --font-family-base: "Source Sans Pro";
+  --font-family-alt: "Integral CF", -apple-system, blinkmacsystemfont,
+    "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable */ }
 
-p {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.6rem;
-  line-height: 28px; }
+@custom-media --xs screen and (min-width: 0);
+@custom-media --sm screen and (min-width: 576px);
+@custom-media --md screen and (min-width: 768px);
+@custom-media --lg screen and (min-width: 992px);
+@custom-media --xl screen and (min-width: 1260px);
+header {
+  padding-top: 28px;
+  transition: all 0.5s; }
 
-h1 {
-  font-family: "Caveat", cursive;
-  font-weight: 700;
-  font-size: 6rem;
-  line-height: 76px;
-  margin-bottom: 100px;
-  position: relative;
-  width: fit-content; }
-
-h1::after {
-  content: "";
-  display: block;
-  width: 280px;
-  height: 27px;
-  position: absolute;
-  right: -80px;
-  top: 100%;
-  background-image: url(./../assets/titelBrush.png);
-  background-repeat: no-repeat; }
-
-h2 {
-  font-family: "Caveat", cursive;
-  font-weight: 700;
-  font-size: 3.4rem;
-  line-height: 34px;
-  text-align: center;
-  letter-spacing: 5%; }
-
-h3 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 3.6rem;
-  line-height: 45px; }
-
-nav {
+.navbar {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  color: #1d1d1b;
+  color: var(--color-black);
   font-size: 1.4rem;
   line-height: 18px;
   text-decoration: none; }
-  nav .active {
-    color: #e33253;
-    transition: all 0.5s; }
+  .navbar img {
+    padding-left: 40px; }
+  .navbar ul {
+    align-items: center;
+    padding-right: 40px; }
+  .navbar .active {
+    color: var(--color-accent);
+    border-bottom: var(--color-accent) solid 2px;
+    padding-bottom: 8px; }
+
+.bg-navbar {
+  background-color: white;
+  transition: all 0.5s;
+  padding: 0; }
+
+.nav-link {
+  color: var(--color-black);
+  margin: 0 20px;
+  font-weight: 500; }
+
+.nav-link:hover {
+  color: var(--color-accent);
+  transition: all 0.5s; }
+
+.winkel {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 30px;
+  border-radius: 20px;
+  width: 140px;
+  height: 40px;
+  color: var(--color-white); }
 
 button {
   font-family: "Quicksand", sans-serif;
@@ -62,13 +74,40 @@ button {
   overflow: hidden;
   outline: none; }
   button:hover {
-    color: #1d1d1b;
+    color: var(--color-black);
     transition: all 0.5s; }
   button.activeLang {
-    color: #1d1d1b; }
+    color: var(--color-black); }
 
-main section {
-  padding: 134px 0; }
+.backTo {
+  position: relative; }
+
+.backTo::before {
+  position: absolute;
+  display: block;
+  background-image: url(./../assets/arrowNav.svg);
+  background-repeat: no-repeat;
+  content: "";
+  top: 40%;
+  left: 0;
+  width: 12px;
+  height: 6px; }
+
+.hide {
+  visibility: hidden;
+  padding-left: 25px;
+  padding: 5px; }
+
+.fadeIn {
+  -webkit-animation: animat_show 1.5s;
+  animation: animat_show 1.5s;
+  visibility: visible !important; }
+
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .form-control .message {
   height: 150px; }
@@ -81,7 +120,7 @@ main section {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 12px;
-  color: #524b39;
+  color: var(--color-primary);
   padding-bottom: 10px;
   text-transform: uppercase;
   padding-left: 25px; }
@@ -109,7 +148,7 @@ main section {
   position: relative;
   padding-left: 40px; }
   .form-check label a {
-    color: #E33253;
+    color: var(--color-accent);
     text-decoration: underline; }
 
 .form-check label::before,
@@ -159,7 +198,7 @@ textarea:focus {
   background-color: #e33253;
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  color: #fefdfb; }
+  color: var(--color-white); }
 
 .submit {
   font-weight: 500;
@@ -169,15 +208,56 @@ textarea:focus {
   width: 200px;
   height: 60px; }
 
-.bold {
-  font-weight: 700; }
-
-.brushesBorder {
-  border-top: 100px solid;
-  border-image: url(./../assets/brushTop.png) 150 stretch; }
-
 .change-bg {
   background-color: #f8f0e2; }
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  line-height: 28px; }
+
+h1 {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 76px;
+  margin-bottom: 100px;
+  position: relative; }
+
+h1::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 27px;
+  position: absolute;
+  right: -80px;
+  top: 100%;
+  background-image: url(./../assets/titelBrush.png);
+  background-repeat: no-repeat; }
+
+h2 {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 5%; }
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 45px; }
+
+.bold {
+  font-weight: var(--weight-bold); }
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-primary); }
+
+main section {
+  padding: 134px 0; }
 
 .carousel {
   display: flex;
@@ -188,7 +268,7 @@ textarea:focus {
   flex-direction: column; }
 
 .buttonSlider {
-  background-color: #524B39;
+  background-color: var(--color-primary);
   width: 60px;
   height: 60px;
   border: 2px solid #F8F0E2;
@@ -197,7 +277,7 @@ textarea:focus {
 
 .carousel-indicators li {
   font-family: "Caveat", cursive;
-  color: #aba18a;
+  color: var(--color-secondary);
   font-size: 2rem;
   line-height: 25px;
   position: relative;
@@ -207,7 +287,7 @@ textarea:focus {
   .carousel-indicators li .active {
     font-size: 4.8rem;
     line-height: 6rem;
-    color: #524b39; }
+    color: var(--color-primary); }
 
 .carousel-indicators li::after {
   display: block;
@@ -218,7 +298,7 @@ textarea:focus {
   position: relative;
   background: none;
   border: 0;
-  color: #aba18a;
+  color: var(--color-secondary);
   font-size: 2rem;
   line-height: 25px;
   font-weight: 400;
@@ -228,7 +308,7 @@ textarea:focus {
 .assortiment {
   font-family: "Caveat", cursive; }
   .assortiment li {
-    color: #aba18a;
+    color: var(--color-secondary);
     font-size: 2rem;
     line-height: 25px; }
   .assortiment li:hover {
@@ -237,7 +317,7 @@ textarea:focus {
   .assortiment .active {
     font-size: 4.8rem;
     line-height: 6rem;
-    color: #524b39; }
+    color: var(--color-primary); }
 
 .brushTitel {
   display: inline-block;
@@ -259,7 +339,7 @@ textarea:focus {
 .voordelen li {
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
-  color: #524b39;
+  color: var(--color-primary);
   list-style-type: none;
   position: relative;
   margin: 25px 0;
@@ -280,42 +360,8 @@ textarea:focus {
     .banner div img {
       padding: 5px 0; }
 
-.about {
-  margin: 0 auto; }
-  .about div {
-    align-self: center; }
-    .about div p {
-      padding: 10px 0; }
-
-header {
-  padding-top: 28px;
-  transition: all 0.5s; }
-
-.nav {
-  align-items: center;
-  padding-right: 40px; }
-
-.nav-link {
-  color: #1d1d1b;
-  margin: 0 20px; }
-
-.winkel {
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 30px;
-  border-radius: 20px;
-  width: 140px;
-  height: 40px;
-  color: #fefdfb; }
-
-.nav-item .active {
-  color: #e33253;
-  border-bottom: #e33253 solid 2px;
-  padding-bottom: 8px; }
-
-.nav-link:hover {
-  color: #e33253;
-  transition: all 0.5s; }
+.about p {
+  padding: 10px 0; }
 
 .toTop {
   border-radius: 50%;
@@ -331,7 +377,7 @@ footer {
   padding-top: 180px;
   font-size: 1.4rem;
   line-height: 24px;
-  color: #524b39;
+  color: var(--color-primary);
   font-weight: 700; }
   footer .col div {
     margin: 32px 0; }
@@ -339,7 +385,7 @@ footer {
     margin-bottom: 0; }
   footer a {
     text-decoration: underline;
-    color: #524b39;
+    color: var(--color-primary);
     font-size: 1.4rem;
     line-height: 24px; }
   footer .pricavy {
@@ -348,47 +394,23 @@ footer {
   footer .footer-info {
     padding-bottom: 100px; }
 
-.testing {
-  padding-bottom: 100px; }
-
 .digital {
-  background-color: #fefdfb;
-  color: #aba18a;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
   height: 50px;
-  font-weight: 400; }
+  font-weight: var(--weight-regular); }
   .digital a {
-    color: #aba18a;
+    color: var(--color-secondary);
     text-decoration: underline; }
-
-.bg-navbar {
-  background-color: white;
-  transition: all 0.5s;
-  padding: 0; }
 
 .winkel:hover,
 .submit:hover {
-  background-color: #1d1d1b;
-  color: #fefdfb;
+  background-color: var(--color-black);
+  color: var(--color-white);
   transition: all 1s; }
 
-.hide {
-  visibility: hidden;
-  padding-left: 25px;
-  padding: 5px; }
-
-.fadeIn {
-  -webkit-animation: animat_show 1.5s;
-  animation: animat_show 1.5s;
-  visibility: visible !important; }
-
-@-webkit-keyframes animat_show {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .timeline-item {
-  border-top: solid 1px #ABA18A; }
+  border-top: solid 1px var(--color-secondary); }
   .timeline-item h3 {
     position: absolute;
     top: -20px;
@@ -400,8 +422,5 @@ footer {
 
 .brush-border {
   width: 100%; }
-
-.logo {
-  padding-left: 40px; }
 
 /*# sourceMappingURL=style.css.map */

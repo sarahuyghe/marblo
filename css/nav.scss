@@ -1,0 +1,113 @@
+header {
+  padding-top: 28px;
+  transition: all 0.5s;
+}
+
+.navbar {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: var(--color-black);
+  font-size: 1.4rem;
+  line-height: 18px;
+  text-decoration: none;
+
+  & img {
+    padding-left: 40px;
+  }
+
+  & ul {
+    align-items: center;
+    padding-right: 40px;
+  }
+
+  & .active {
+    color: var(--color-accent);
+    border-bottom: var(--color-accent) solid 2px;
+    padding-bottom: 8px;
+  }
+}
+
+.bg-navbar {
+  background-color: white;
+  transition: all 0.5s;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--color-black);
+  margin: 0 20px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+  transition: all 0.5s;
+}
+
+.winkel {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 30px;
+  border-radius: 20px;
+  width: 140px;
+  height: 40px;
+  color: var(--color-white);
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #a6a69e;
+  background: none;
+  border: none;
+  overflow: hidden;
+  outline: none;
+
+  &:hover {
+    color: var(--color-black);
+    transition: all 0.5s;
+  }
+
+  &.activeLang {
+    color: var(--color-black);
+  }
+}
+
+.backTo {
+  position: relative;
+}
+
+.backTo::before {
+  position: absolute;
+  display: block;
+  background-image: url(./../assets/arrowNav.svg);
+  background-repeat: no-repeat;
+  content: "";
+  top: 40%;
+  left: 0;
+  width: 12px;
+  height: 6px;
+}
+
+.hide {
+  visibility: hidden;
+  padding-left: 25px;
+  padding: 5px;
+}
+
+.fadeIn {
+  -webkit-animation: animat_show 1.5s;
+  animation: animat_show 1.5s;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

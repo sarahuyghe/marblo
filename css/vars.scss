@@ -1,0 +1,23 @@
+:root {
+  --color-black: #1D1D1B;
+  --color-white: #FEFDFB;
+  --color-secondary: #ABA18A;
+  --color-primary: #524B39;
+  --color-accent: #E33253;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  /* stylelint-disable */
+  --font-family-base: "Source Sans Pro";
+  --font-family-alt: "Integral CF", -apple-system, blinkmacsystemfont,
+    "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable */
+}
+
+@custom-media --xs screen and (min-width: 0);
+@custom-media --sm screen and (min-width: 576px);
+@custom-media --md screen and (min-width: 768px);
+@custom-media --lg screen and (min-width: 992px);
+@custom-media --xl screen and (min-width: 1260px);
