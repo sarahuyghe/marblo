@@ -13,6 +13,8 @@ main section {
   padding: 134px 0;
 }
 
+
+
 .carousel {
   display: flex;
   align-content: center;
@@ -21,9 +23,10 @@ main section {
 .carousel-indicators {
   display: flex;
   flex-direction: column;
+
 }
 
-.buttonSlider {
+.carousel-control-next {
   background-color: var(--color-primary);
   width: 60px;
   height: 60px;
@@ -31,6 +34,10 @@ main section {
   border-radius: 50%;
   opacity: 1;
 }
+
+.carousel-control-next::after {}
+
+
 
 .carousel-indicators li {
   font-family: "Caveat", cursive;
@@ -48,6 +55,12 @@ main section {
     line-height: 6rem;
     color: var(--color-primary);
   }
+
+  flex: none;
+  background: none;
+  border: none;
+  height: auto;
+  opacity: 1;
 }
 
 .carousel-indicators li::after {
@@ -104,7 +117,7 @@ main section {
 }
 
 
-.voordelen li::before {
+.listing li::before {
   display: block;
   position: absolute;
   content: "";
@@ -117,25 +130,28 @@ main section {
   // background-size: 10px 8px
 }
 
-.voordelen li {
+.listing li {
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
   color: var(--color-primary);
   list-style-type: none;
   position: relative;
-  margin: 25px 0;
+  margin: 15px 0;
   line-height: 25px;
   padding-left: 30px;
 }
 
-
-
 .banner {
+  margin: 0;
   background-image: url(./../assets/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 950px;
   padding: 0;
+
+  & .decorationImg {
+    padding: 0;
+
+  }
 
   & div {
     display: flex;
@@ -150,9 +166,29 @@ main section {
 }
 
 .about {
+
+  & .offer {
+    border: solid 2px var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+    max-width: 458px;
+  }
+
   & p {
     padding: 10px 0;
   }
+}
+
+.about img::before {
+  background-image: url(./../assets/decoration-about.png);
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 299px;
+  width: 320px;
+  top: -5%;
+  left: 0
 }
 
 .toTop {
@@ -191,10 +227,11 @@ footer {
   & .pricavy {
     display: flex;
     flex-direction: column;
+    font-family: "Quicksand", sans-serif;
   }
 
   & .footer-info {
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
 }
 
@@ -220,6 +257,7 @@ footer {
 
 .timeline-item {
   border-top: solid 1px var(--color-secondary);
+  position: relative;
 
   & h3 {
     position: absolute;
@@ -234,6 +272,70 @@ footer {
   }
 }
 
+
+.timeline-item:nth-child(1)::before {
+  border: solid 1px var(--color-secondary);
+  background-color: var(--color-secondary-background);
+  border-radius: 50%; // background-image: url(./../assets/bullet.svg);
+  // background-repeat: no-repeat;
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: -5px; // top: 25%;
+  left: 0;
+  width: 9px;
+  height: 9px;
+}
+
 .brush-border {
   width: 100%;
+  display: block;
+}
+
+
+.decoration {
+  position: relative;
+
+  & .carrots {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -300px;
+
+  }
+
+  & .twoPeppers {
+    position: absolute;
+    display: block;
+    bottom: 25px;
+  }
+
+  & .leaf {
+    position: absolute;
+    display: block;
+    top: 100px;
+  }
+
+
+  & .peppercorns {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -350px;
+    z-index: 1;
+  }
+
+  & .redPepper {
+    position: absolute;
+    display: block;
+    top: -325px;
+  }
+
+  & .onion {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 60px;
+
+  }
 }

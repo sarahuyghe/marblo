@@ -12,11 +12,12 @@ h1 {
   margin-bottom: 100px;
   position: relative;
   // width: fit-content;
+  display: inline-block;
 }
 
 h1::after {
   content: "";
-  display: block;
+
   width: 280px;
   height: 27px;
   position: absolute;
@@ -33,6 +34,7 @@ h2 {
   line-height: 34px;
   text-align: center;
   letter-spacing: 5%;
+  color: var(--color-black)
 }
 
 h3 {

@@ -2,35 +2,6 @@
   height: 150px
 }
 
-form {
-  // width: 730px;
-
-
-  // & div {
-  //   display: grid;
-  //   padding-top: 28px;
-  // }
-
-  // & .message {
-  //   grid-column: 1 / span 2;
-
-  //   & input {
-  //     height: 150px;
-  //     width: 100%;
-  //   }
-  // }
-
-  // & label {
-  //   font-family: "Quicksand", sans-serif;
-  //   font-weight: 700;
-  //   font-size: 1.2rem;
-  //   line-height: 12px;
-  //   color: #524b39;
-  //   padding-bottom: 10px;
-  //   text-transform: uppercase;
-  //   padding-left: 25px;
-  // }
-}
 
 .form-row {
   margin-top: 18px;
@@ -51,7 +22,7 @@ form {
 
 
 .form-control {
-  border: solid #f8f0e2 1px;
+  border: solid var(--color-secondary-background) 1px;
   border-radius: 25px;
   background-color: rgba(248, 240, 226, 0.33);
   height: 50px;
@@ -159,5 +130,5 @@ textarea:focus {
 }
 
 .change-bg {
-  background-color: #f8f0e2;
+  background-color: var(--color-secondary-background);
 }
