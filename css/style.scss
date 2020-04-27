@@ -27,7 +27,7 @@ main section {
   border-radius: 50%;
   opacity: 1;
   margin-top: 20px;
-
+  // position: relative
 }
 
 .carousel-control-next:hover,
@@ -192,6 +192,8 @@ main section {
     justify-content: center;
     align-items: center;
 
+    padding: 0;
+
     & img {
       padding: 5px 0;
     }
@@ -201,10 +203,13 @@ main section {
 .about {
 
   & .offer {
-    border: solid 2px var(--color-primary);
-    border-radius: 50%;
     position: relative;
-    max-width: 458px;
+
+    & img {
+      border: solid 2px var(--color-primary);
+      border-radius: 50%;
+      max-width: 458px;
+    }
   }
 
   & p {
@@ -212,7 +217,7 @@ main section {
   }
 }
 
-.about img::after {
+.about .offer::after {
   background-image: url("./../assets/decoration-about.png");
   background-repeat: no-repeat;
   display: block;
@@ -220,8 +225,9 @@ main section {
   content: "";
   height: 299px;
   width: 320px;
-  // top: -5%;
-  // left: 0
+  top: -140px;
+  left: -50px;
+  z-index: -1
 }
 
 .toTop {

@@ -9,6 +9,7 @@ header {
   font-size: 1.4rem;
   line-height: 18px;
   text-decoration: none;
+  align-items: center;
 
   & img {
     padding-left: 40px;
@@ -53,15 +54,18 @@ header {
   color: var(--color-white);
 }
 
-button {
+.lang {
+  display: flex;
+  width: 30px;
+  margin-left: 20px
+}
+
+.lang li {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   line-height: 15px;
   color: #a6a69e;
-  background: none;
-  border: none;
-  overflow: hidden;
-  outline: none;
+  padding: 0 2px;
 
   &:hover {
     color: var(--color-black);

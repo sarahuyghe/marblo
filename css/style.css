@@ -30,7 +30,8 @@ header {
   color: var(--color-black);
   font-size: 1.4rem;
   line-height: 18px;
-  text-decoration: none; }
+  text-decoration: none;
+  align-items: center; }
   .navbar-nav img {
     padding-left: 40px; }
   .navbar-nav ul {
@@ -64,19 +65,21 @@ header {
   height: 40px;
   color: var(--color-white); }
 
-button {
+.lang {
+  display: flex;
+  width: 30px;
+  margin-left: 20px; }
+
+.lang li {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   line-height: 15px;
   color: #a6a69e;
-  background: none;
-  border: none;
-  overflow: hidden;
-  outline: none; }
-  button:hover {
+  padding: 0 2px; }
+  .lang li:hover {
     color: var(--color-black);
     transition: all 0.5s; }
-  button.activeLang {
+  .lang li.activeLang {
     color: var(--color-black); }
 
 .backTo {
@@ -406,27 +409,32 @@ main section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 0; }
     .banner div img {
       padding: 5px 0; }
 
 .about .offer {
-  border: solid 2px var(--color-primary);
-  border-radius: 50%;
-  position: relative;
-  max-width: 458px; }
+  position: relative; }
+  .about .offer img {
+    border: solid 2px var(--color-primary);
+    border-radius: 50%;
+    max-width: 458px; }
 
 .about p {
   padding: 10px 0; }
 
-.about img::after {
+.about .offer::after {
   background-image: url("./../assets/decoration-about.png");
   background-repeat: no-repeat;
   display: block;
   position: absolute;
   content: "";
   height: 299px;
-  width: 320px; }
+  width: 320px;
+  top: -140px;
+  left: -50px;
+  z-index: -1; }
 
 .toTop {
   border-radius: 50%;
