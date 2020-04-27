@@ -281,8 +281,7 @@ main section {
 
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
-  width: 70px;
-  height: 70px;
+  transform: scale(1);
   transition: all .5s; }
 
 .carousel-control-next {
@@ -299,7 +298,9 @@ main section {
   background-repeat: no-repeat;
   top: 0;
   left: 0;
-  transform: rotate(90deg); }
+  transform: rotate(90deg);
+  width: 12px;
+  height: 21px; }
 
 .carousel-control-prev::after {
   content: "";
@@ -308,11 +309,21 @@ main section {
   background-image: url(./../assets/arrow.svg);
   background-repeat: no-repeat;
   top: 0;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+  width: 12px;
+  height: 21px; }
 
 .carousel-indicators {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  direction: rtl;
+  width: 10px;
+  line-height: 0; }
 
 .carousel-indicators li {
   font-family: "Caveat", cursive;
@@ -322,12 +333,16 @@ main section {
   position: relative;
   text-indent: 0;
   width: 100%;
-  margin: 10px 0;
+  padding: 10px 0;
   flex: none;
   background: none;
   border: none;
   height: auto;
-  opacity: 1; }
+  opacity: 1;
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  margin: 0; }
 
 .carousel-indicators li:hover {
   font-size: 3.5rem;
@@ -339,22 +354,6 @@ main section {
   font-size: 4.8rem;
   line-height: 6rem;
   color: var(--color-primary); }
-
-.carousel-indicators li::after {
-  display: block;
-  -ms-flex: none;
-  flex: none;
-  width: 100%;
-  height: auto;
-  position: relative;
-  background: none;
-  border: 0;
-  color: var(--color-secondary);
-  font-size: 2rem;
-  line-height: 25px;
-  font-weight: 400;
-  text-indent: 1;
-  content: ""; }
 
 .assortiment {
   font-family: "Caveat", cursive; }
@@ -415,15 +414,17 @@ main section {
     .banner div img {
       padding: 5px 0; }
 
-.about .offer {
-  position: relative; }
-  .about .offer img {
-    border: solid 2px var(--color-primary);
-    border-radius: 50%;
-    max-width: 458px; }
-
-.about p {
-  padding: 10px 0; }
+.about {
+  position: relative;
+  z-index: 1; }
+  .about .offer {
+    position: relative; }
+    .about .offer img {
+      border: solid 2px var(--color-primary);
+      border-radius: 50%;
+      max-width: 458px; }
+  .about p {
+    padding: 10px 0; }
 
 .about .offer::after {
   background-image: url("./../assets/decoration-about.png");
@@ -521,7 +522,8 @@ footer {
     position: absolute;
     display: block;
     right: 0;
-    top: -300px; }
+    top: -300px;
+    z-index: -1; }
   .decoration .twoPeppers {
     position: absolute;
     display: block;

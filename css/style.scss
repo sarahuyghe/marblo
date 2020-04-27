@@ -32,8 +32,7 @@ main section {
 
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
-  width: 70px;
-  height: 70px;
+  transform: scale(1);
   transition: all .5s;
 }
 
@@ -54,6 +53,8 @@ main section {
   top: 0;
   left: 0;
   transform: rotate(90deg);
+  width: 12px;
+  height: 21px
 }
 
 .carousel-control-prev::after {
@@ -64,11 +65,21 @@ main section {
   background-repeat: no-repeat;
   top: 0;
   transform: rotate(-90deg);
+  width: 12px;
+  height: 21px
 }
 
 .carousel-indicators {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  direction: rtl;
+  width: 10px;
+  line-height: 0;
 }
 
 .carousel-indicators li {
@@ -78,15 +89,17 @@ main section {
   line-height: 25px;
   position: relative;
   text-indent: 0;
-  // opacity: 0;
   width: 100%;
-  margin: 10px 0;
+  padding: 10px 0;
   flex: none;
   background: none;
   border: none;
   height: auto;
   opacity: 1;
-
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .carousel-indicators li:hover {
@@ -96,29 +109,10 @@ main section {
   transition: all .5s;
 }
 
-
-
 .carousel-indicators .active {
   font-size: 4.8rem;
   line-height: 6rem;
   color: var(--color-primary);
-}
-
-.carousel-indicators li::after {
-  display: block;
-  -ms-flex: none;
-  flex: none;
-  width: 100%;
-  height: auto;
-  position: relative;
-  background: none;
-  border: 0;
-  color: var(--color-secondary);
-  font-size: 2rem;
-  line-height: 25px;
-  font-weight: 400;
-  text-indent: 1;
-  content: "";
 }
 
 .assortiment {
@@ -200,6 +194,8 @@ main section {
 }
 
 .about {
+  position: relative;
+  z-index: 1;
 
   & .offer {
     position: relative;
@@ -344,7 +340,7 @@ footer {
     display: block;
     right: 0;
     top: -300px;
-
+    z-index: -1;
   }
 
   & .twoPeppers {
