@@ -186,8 +186,7 @@ header {
   left: 7.5px;
   width: 15px;
   height: 11px;
-  background-size: 15px 11px;
-  top: 10px; }
+  background-size: 15px 11px; }
 
 input[type="text"]:focus,
 input[type="checkbox"]:focus,
@@ -223,21 +222,30 @@ p {
 h1 {
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 76px;
-  margin-bottom: 100px;
   position: relative;
   display: inline-block; }
+  @media only screen and (min-width: 992px) {
+    h1 {
+      font-size: 6rem;
+      line-height: 76px;
+      margin-bottom: 100px; } }
 
 h1::after {
   content: "";
   width: 280px;
   height: 27px;
   position: absolute;
-  right: -80px;
+  right: 0px;
   top: 100%;
   background-image: url(./../assets/titelBrush.png);
   background-repeat: no-repeat; }
+  @media only screen and (min-width: 768px) {
+    h1::after {
+      width: 280px;
+      height: 27px;
+      right: -80px; } }
 
 h2 {
   font-family: "Caveat", cursive;
@@ -273,7 +281,7 @@ main section {
   background-color: var(--color-primary);
   width: 60px;
   height: 60px;
-  border: 2px solid #F8F0E2;
+  border: 2px solid #f8f0e2;
   border-radius: 50%;
   opacity: 1;
   margin-top: 20px;
@@ -282,7 +290,7 @@ main section {
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
   transform: scale(1);
-  transition: all .5s; }
+  transition: all 0.5s; }
 
 .carousel-control-next {
   margin-right: 30px; }
@@ -348,7 +356,7 @@ main section {
   font-size: 3.5rem;
   line-height: 6rem;
   color: var(--color-primary);
-  transition: all .5s; }
+  transition: all 0.5s; }
 
 .carousel-indicators .active {
   font-size: 4.8rem;
@@ -404,7 +412,11 @@ main section {
   padding: 0;
   background-position: center; }
   .banner .decorationImg {
-    padding: 0; }
+    display: none; }
+    @media only screen and (min-width: 992px) {
+      .banner .decorationImg {
+        padding: 0;
+        display: block; } }
   .banner div {
     display: flex;
     flex-direction: column;
@@ -422,9 +434,47 @@ main section {
     .about .offer img {
       border: solid 2px var(--color-primary);
       border-radius: 50%;
-      max-width: 458px; }
+      max-width: 250px; }
+      @media only screen and (min-width: 768px) {
+        .about .offer img {
+          max-width: 250px; } }
+      @media only screen and (min-width: 992px) {
+        .about .offer img {
+          max-width: 400px; } }
+      @media only screen and (min-width: 1200px) {
+        .about .offer img {
+          max-width: 458px; } }
   .about p {
     padding: 10px 0; }
+
+iframe {
+  width: auto; }
+  @media only screen and (min-width: 768px) {
+    iframe {
+      width: 470px; } }
+  @media only screen and (min-width: 1200px) {
+    iframe {
+      width: 539px; } }
+
+.about-col-left,
+.about-col-right {
+  margin: 20px auto; }
+  @media only screen and (min-width: 768px) {
+    .about-col-left,
+    .about-col-right {
+      margin-bottom: 50px; } }
+  @media only screen and (min-width: 1200px) {
+    .about-col-left,
+    .about-col-right {
+      margin-bottom: 100px; } }
+
+@media only screen and (min-width: 768px) {
+  .about-col-right {
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 1200px) {
+  .about-col-right {
+    margin-left: 50px; } }
 
 .about .offer::after {
   background-image: url("./../assets/decoration-about.png");
@@ -489,16 +539,21 @@ footer {
   transition: all 1s; }
 
 .timeline-item {
-  border-top: solid 1px var(--color-secondary);
-  position: relative; }
-  .timeline-item h3 {
-    position: absolute;
-    top: -20px;
-    padding: 0 23px;
-    background-color: #F8F0E2; }
-  .timeline-item div {
-    margin-top: 30px;
-    padding-left: 23px; }
+  margin: 10px 0; }
+  @media only screen and (min-width: 992px) {
+    .timeline-item {
+      border-top: solid 1px var(--color-secondary);
+      position: relative; } }
+  @media only screen and (min-width: 992px) {
+    .timeline-item h3 {
+      position: absolute;
+      top: -20px;
+      padding: 0 23px;
+      background-color: #f8f0e2; } }
+  @media only screen and (min-width: 992px) {
+    .timeline-item div {
+      margin-top: 30px;
+      padding-left: 23px; } }
 
 .timeline-item:nth-child(1)::before {
   border: solid 1px var(--color-secondary);
@@ -517,7 +572,11 @@ footer {
   display: block; }
 
 .decoration {
-  position: relative; }
+  position: relative;
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .decoration {
+      display: block; } }
   .decoration .carrots {
     position: absolute;
     display: block;
@@ -538,6 +597,12 @@ footer {
     right: 0;
     top: -350px;
     z-index: 1; }
+    @media only screen and (min-width: 768px) {
+      .decoration .peppercorns {
+        width: 700px; } }
+    @media only screen and (min-width: 1200px) {
+      .decoration .peppercorns {
+        width: fit-content; } }
   .decoration .redPepper {
     position: absolute;
     display: block;
