@@ -13,9 +13,17 @@ h1 {
   // width: fit-content;
   display: inline-block;
 
-  @media only screen and (min-width: 576px) {}
+  @media only screen and (min-width: 576px) {
+    font-size: 4rem;
+    line-height: 76px;
+    margin-bottom: 80px;
+  }
 
-  @media only screen and (min-width: 768px) {}
+  @media only screen and (min-width: 768px) {
+    font-size: 5rem;
+    line-height: 76px;
+    margin-bottom: 80px;
+  }
 
   @media only screen and (min-width: 992px) {
     font-size: 6rem;
@@ -42,8 +50,9 @@ h1::after {
     width: 280px;
     height: 27px;
     right: -80px;
-
   }
+
+  @media only screen and (min-width: 992px) {}
 }
 
 h2 {

@@ -2,6 +2,20 @@ header {
   transition: all 0.5s;
 }
 
+.navbar {
+  background-color: white;
+
+  & img {
+    width: 100px;
+
+    @media only screen and (min-width: 768px) {
+      width: 200px;
+    }
+
+    @media only screen and (min-width: 1200px) {}
+  }
+}
+
 .navbar-nav {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
@@ -57,7 +71,15 @@ header {
 .lang {
   display: flex;
   width: 30px;
-  margin-left: 20px
+  margin-left: 20px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .lang li {

@@ -24,6 +24,14 @@
 header {
   transition: all 0.5s; }
 
+.navbar {
+  background-color: white; }
+  .navbar img {
+    width: 100px; }
+    @media only screen and (min-width: 768px) {
+      .navbar img {
+        width: 200px; } }
+
 .navbar-nav {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
@@ -69,6 +77,12 @@ header {
   display: flex;
   width: 30px;
   margin-left: 20px; }
+  @media only screen and (min-width: 768px) {
+    .lang {
+      flex-direction: column; } }
+  @media only screen and (min-width: 1200px) {
+    .lang {
+      flex-direction: row; } }
 
 .lang li {
   font-family: "Quicksand", sans-serif;
@@ -226,6 +240,16 @@ h1 {
   line-height: 76px;
   position: relative;
   display: inline-block; }
+  @media only screen and (min-width: 576px) {
+    h1 {
+      font-size: 4rem;
+      line-height: 76px;
+      margin-bottom: 80px; } }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 5rem;
+      line-height: 76px;
+      margin-bottom: 80px; } }
   @media only screen and (min-width: 992px) {
     h1 {
       font-size: 6rem;
@@ -437,7 +461,7 @@ main section {
       max-width: 250px; }
       @media only screen and (min-width: 768px) {
         .about .offer img {
-          max-width: 250px; } }
+          max-width: 200px; } }
       @media only screen and (min-width: 992px) {
         .about .offer img {
           max-width: 400px; } }
@@ -451,7 +475,10 @@ iframe {
   width: auto; }
   @media only screen and (min-width: 768px) {
     iframe {
-      width: 470px; } }
+      width: 539px; } }
+  @media only screen and (min-width: 992px) {
+    iframe {
+      width: 450px; } }
   @media only screen and (min-width: 1200px) {
     iframe {
       width: 539px; } }
@@ -470,7 +497,7 @@ iframe {
 
 @media only screen and (min-width: 768px) {
   .about-col-right {
-    margin-left: 20px; } }
+    margin-left: 50px; } }
 
 @media only screen and (min-width: 1200px) {
   .about-col-right {
@@ -540,16 +567,26 @@ footer {
 
 .timeline-item {
   margin: 10px 0; }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .timeline-item {
       border-top: solid 1px var(--color-secondary);
       position: relative; } }
+  @media only screen and (min-width: 768px) {
+    .timeline-item h3 {
+      position: absolute;
+      top: -20px;
+      padding: 0 13px;
+      background-color: #f8f0e2; } }
   @media only screen and (min-width: 992px) {
     .timeline-item h3 {
       position: absolute;
       top: -20px;
-      padding: 0 23px;
+      padding-left: 23px;
       background-color: #f8f0e2; } }
+  @media only screen and (min-width: 768px) {
+    .timeline-item div {
+      margin-top: 30px;
+      padding-left: 13px; } }
   @media only screen and (min-width: 992px) {
     .timeline-item div {
       margin-top: 30px;
@@ -599,7 +636,7 @@ footer {
     z-index: 1; }
     @media only screen and (min-width: 768px) {
       .decoration .peppercorns {
-        width: 700px; } }
+        width: 650px; } }
     @media only screen and (min-width: 1200px) {
       .decoration .peppercorns {
         width: fit-content; } }
