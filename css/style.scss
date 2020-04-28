@@ -272,7 +272,7 @@ iframe {
 .about .offer::after {
   background-image: url("./../assets/decoration-about.png");
   background-repeat: no-repeat;
-  display: block;
+  display: none;
   position: absolute;
   content: "";
   height: 299px;
@@ -280,6 +280,10 @@ iframe {
   top: -140px;
   left: -50px;
   z-index: -1;
+
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .toTop {
@@ -391,15 +395,19 @@ footer {
 .timeline-item:nth-child(1)::before {
   border: solid 1px var(--color-secondary);
   background-color: var(--color-secondary-background);
-  border-radius: 50%; // background-image: url(./../assets/bullet.svg);
-  // background-repeat: no-repeat;
+  border-radius: 50%;
   position: absolute;
-  display: inline-block;
+  display: none;
   content: "";
-  top: -5px; // top: 25%;
+  top: -5px;
   left: 0;
   width: 9px;
   height: 9px;
+
+  @media only screen and (min-width: 576px) {
+    display: inline-block;
+
+  }
 }
 
 .brush-border {

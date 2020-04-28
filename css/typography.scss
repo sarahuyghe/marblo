@@ -7,11 +7,12 @@ p {
 h1 {
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.6rem;
   line-height: 76px;
   position: relative;
   // width: fit-content;
   display: inline-block;
+  margin-bottom: 50px;
 
   @media only screen and (min-width: 576px) {
     font-size: 4rem;
@@ -41,7 +42,7 @@ h1::after {
   width: 280px;
   height: 27px;
   position: absolute;
-  right: 0px;
+  right: -50px;
   top: 100%;
   background-image: url(./../assets/titelBrush.png);
   background-repeat: no-repeat;
