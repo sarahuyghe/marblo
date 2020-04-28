@@ -1,7 +1,17 @@
 p {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.6rem;
-  line-height: 28px;
+  font-size: 1.4rem;
+  line-height: 20px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 24px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    font-size: 1.6rem;
+    line-height: 28px;
+  }
 }
 
 h1 {

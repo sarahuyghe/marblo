@@ -24,22 +24,30 @@
 header {
   transition: all 0.5s; }
 
-.navbar {
-  background-color: white; }
-  .navbar img {
-    width: 100px; }
-    @media only screen and (min-width: 768px) {
-      .navbar img {
-        width: 200px; } }
+@media only screen and (min-width: 768px) {
+  .navbar {
+    background-color: transparent; } }
+
+.navbar img {
+  width: 100px; }
+  @media only screen and (min-width: 768px) {
+    .navbar img {
+      width: 100px; } }
+  @media only screen and (min-width: 1200px) {
+    .navbar img {
+      width: 200px; } }
 
 .navbar-nav {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: var(--color-black);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 18px;
   text-decoration: none;
   align-items: center; }
+  @media only screen and (min-width: 992px) {
+    .navbar-nav {
+      font-size: 1.4rem; } }
   .navbar-nav img {
     padding-left: 40px; }
   .navbar-nav ul {
@@ -129,11 +137,22 @@ header {
 #hamburger .icon-bar {
   background: black; }
 
+.navbar-brand {
+  width: 60px;
+  padding: 10px; }
+
 .message {
   height: 150px; }
 
-.form-row {
+@media only screen and (min-width: 992px) {
+  .form-row {
+    margin-top: 18px; } }
+
+.form-group {
   margin-top: 18px; }
+  @media only screen and (min-width: 992px) {
+    .form-group {
+      margin-top: 0; } }
 
 .form-group label {
   font-family: "Quicksand", sans-serif;
@@ -170,7 +189,13 @@ header {
 .form-check label {
   font-weight: normal;
   position: relative;
-  padding-left: 40px; }
+  padding-left: 40px;
+  font-size: 1.2rem;
+  line-height: 20px; }
+  @media only screen and (min-width: 768px) {
+    .form-check label {
+      font-size: 1.4rem;
+      line-height: 24px; } }
   .form-check label a {
     color: var(--color-accent);
     text-decoration: underline; }
@@ -191,7 +216,10 @@ header {
   border-radius: 5px;
   background: rgba(248, 240, 226, 0.33);
   left: 0;
-  top: -10px; }
+  top: 0px; }
+  @media only screen and (min-width: 768px) {
+    .form-check label::before {
+      top: -5px; } }
 
 .form-check label:after {
   background-image: url(./../assets/checkForm.svg);
@@ -200,7 +228,11 @@ header {
   left: 7.5px;
   width: 15px;
   height: 11px;
-  background-size: 15px 11px; }
+  background-size: 15px 11px;
+  top: 7.5px; }
+  @media only screen and (min-width: 768px) {
+    .form-check label:after {
+      top: 5px; } }
 
 input[type="text"]:focus,
 input[type="checkbox"]:focus,
@@ -222,16 +254,36 @@ textarea:focus {
 
 .submit {
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 28px;
   border-radius: 30px;
-  width: 200px;
-  height: 60px; }
+  width: 150px;
+  height: 40px; }
+  @media only screen and (min-width: 768px) {
+    .submit {
+      width: 180px;
+      height: 50px;
+      font-size: 2rem;
+      line-height: 28px; } }
+  @media only screen and (min-width: 992px) {
+    .submit {
+      font-size: 2.2rem;
+      line-height: 28px;
+      width: 200px;
+      height: 60px; } }
 
 p {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.6rem;
-  line-height: 28px; }
+  font-size: 1.4rem;
+  line-height: 20px; }
+  @media only screen and (min-width: 768px) {
+    p {
+      font-size: 1.5rem;
+      line-height: 24px; } }
+  @media only screen and (min-width: 992px) {
+    p {
+      font-size: 1.6rem;
+      line-height: 28px; } }
 
 h1 {
   font-family: "Caveat", cursive;
@@ -295,7 +347,10 @@ body {
   color: var(--color-primary); }
 
 main section {
-  padding: 134px 0; }
+  padding: 40px 20px; }
+  @media only screen and (min-width: 768px) {
+    main section {
+      padding: 134px 0; } }
 
 .carousel {
   display: flex;
@@ -421,13 +476,21 @@ main section {
 
 .listing li {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--color-primary);
   list-style-type: none;
   position: relative;
   margin: 15px 0;
-  line-height: 25px;
+  line-height: 20px;
   padding-left: 30px; }
+  @media only screen and (min-width: 768px) {
+    .listing li {
+      font-size: 1.5rem;
+      line-height: 24px; } }
+  @media only screen and (min-width: 992px) {
+    .listing li {
+      font-size: 1.6rem;
+      line-height: 28px; } }
 
 .banner {
   margin: 0;
@@ -437,7 +500,12 @@ main section {
   padding: 0;
   background-position: center; }
   .banner .decorationImg {
-    display: none; }
+    margin-top: -500px;
+    margin-left: -150px; }
+    @media only screen and (min-width: 768px) {
+      .banner .decorationImg {
+        margin-top: 0;
+        margin-left: 0; } }
     @media only screen and (min-width: 992px) {
       .banner .decorationImg {
         padding: 0;
@@ -473,10 +541,12 @@ main section {
     padding: 10px 0; }
 
 iframe {
-  width: auto; }
+  width: auto;
+  height: auto; }
   @media only screen and (min-width: 768px) {
     iframe {
-      width: 539px; } }
+      width: 539px;
+      height: 303px; } }
   @media only screen and (min-width: 992px) {
     iframe {
       width: 450px; } }
@@ -490,17 +560,13 @@ iframe {
   @media only screen and (min-width: 768px) {
     .about-col-left,
     .about-col-right {
-      margin-bottom: 50px; } }
+      margin-bottom: 25px; } }
   @media only screen and (min-width: 1200px) {
     .about-col-left,
     .about-col-right {
       margin-bottom: 100px; } }
 
-@media only screen and (min-width: 768px) {
-  .about-col-right {
-    margin-left: 50px; } }
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .about-col-right {
     margin-left: 50px; } }
 
@@ -524,13 +590,16 @@ iframe {
   background-color: #807968;
   height: 50px;
   width: 50px;
-  padding: 15px; }
+  padding: 15px;
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .toTop {
+      display: inline-block; } }
 
 footer {
   background-image: url(./../assets/bg-footer.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 180px;
   font-size: 1.4rem;
   line-height: 24px;
   color: var(--color-primary);
@@ -551,14 +620,26 @@ footer {
     flex-direction: column;
     font-family: "Quicksand", sans-serif; }
   footer .footer-info {
-    padding: 100px 0; }
+    padding: 100px 20px; }
+    @media only screen and (min-width: 768px) {
+      footer .footer-info {
+        padding-left: 0;
+        padding-right: 0; } }
+    footer .footer-info div {
+      padding-top: 20px; }
+      @media only screen and (min-width: 768px) {
+        footer .footer-info div {
+          padding-top: 0; } }
 
 .digital {
   background-color: var(--color-white);
   color: var(--color-secondary);
   height: 50px;
   font-weight: var(--weight-regular);
-  padding-top: 15px; }
+  padding-top: 5px; }
+  @media only screen and (min-width: 768px) {
+    .digital {
+      padding-top: 15px; } }
   .digital a {
     color: var(--color-secondary);
     text-decoration: underline; }
