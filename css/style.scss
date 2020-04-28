@@ -9,14 +9,12 @@ body {
   color: var(--color-primary);
 }
 
-
 main section {
   padding: 40px 20px;
 
   @media only screen and (min-width: 768px) {
     padding: 134px 0;
   }
-
 }
 
 .carousel {
@@ -27,13 +25,19 @@ main section {
 .carousel-control-next,
 .carousel-control-prev {
   background-color: var(--color-primary);
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #f8f0e2;
   border-radius: 50%;
   opacity: 1;
-  margin-top: 20px;
+  margin-top: 0px;
   position: absolute;
+
+  @media only screen and (min-width: 768px) {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+  }
 }
 
 .carousel-control-next:hover,
@@ -73,6 +77,11 @@ main section {
   transform: rotate(-90deg);
   width: 12px;
   height: 21px;
+}
+
+.carousel-item {
+  width: contain;
+  // height: contain;
 }
 
 .carousel-indicators {
@@ -211,13 +220,81 @@ main section {
   }
 }
 
-.banner {
-  margin: 0;
+.banner-professional,
+.banner,
+.banner-privacy {
   background-image: url(./../assets/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0;
   background-position: center;
+}
+
+.banner-privacy {
+  // position: relative;
+  // top: -200px;
+  background-position: center;
+  padding: 100px 0 25px 0;
+
+  @media only screen and (min-width: 768px) {
+    padding: 200px 0 25px 0;
+  }
+}
+
+.banner-professional {
+  padding: 100px 0;
+
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+
+  & .order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+      font-size: 1.4rem;
+      margin-top: 10px;
+      font-weight: 500;
+
+      @media only screen and (min-width: 992px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    & a {
+      font-weight: 500;
+      border-bottom: solid 1px var(--color-accent);
+      padding-bottom: 2px;
+      color: var(--color-accent)
+    }
+  }
+}
+
+.privacy {
+  padding-top: 25px;
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 75px;
+
+  }
+
+  & p {
+    margin: 25px 0;
+
+    @media only screen and (min-width: 768px) {
+      margin: 50px 0;
+
+
+    }
+  }
+
+}
+
+.banner {
+  margin: 0;
+  padding: 0;
   // max-height: 950px;
 
   & .decorationImg {
@@ -241,7 +318,7 @@ main section {
     width: 200px;
 
     @media only screen and (min-width: 768px) {
-      width: 300px;
+      width: 400px;
     }
   }
 
@@ -503,41 +580,85 @@ footer {
 
 .decoration {
   position: relative;
-  display: none;
+  display: block;
 
-  @media only screen and (min-width: 768px) {
-    display: block;
+  & .about-professional {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 100px;
+    right: -100px;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+      top: 75px;
+      right: -75px;
+      width: 250px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      display: block;
+      top: 100px;
+      right: -100px;
+      width: unset;
+    }
   }
+
+
 
   & .carrots {
     position: absolute;
-    display: block;
+    display: none;
     right: 0;
     top: -300px;
     z-index: -1;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+
+    }
   }
 
   & .twoPeppers {
     position: absolute;
     display: block;
-    bottom: 25px;
+    bottom: 0px;
+    left: -20px;
+    width: 100px;
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      bottom: 25px;
+      left: 0;
+    }
   }
 
   & .leaf {
     position: absolute;
     display: block;
-    top: 100px;
+    width: 150px;
+    left: -20px;
+    top: -20px;
+
+
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      top: 100px;
+      left: 0;
+    }
   }
 
   & .peppercorns {
     position: absolute;
-    display: block;
+    display: none;
     right: 0;
     top: -350px;
     z-index: 1;
 
 
     @media only screen and (min-width: 768px) {
+      display: block;
       width: 650px;
     }
 
@@ -549,17 +670,68 @@ footer {
   & .redPepper {
     position: absolute;
     display: block;
-    top: -325px;
+    top: -145px;
+    left: -20px;
+    width: 150px;
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      top: -325px;
+      left: 0;
+    }
   }
 
   & .onion {
     position: absolute;
     display: block;
     right: 0;
-    top: 60px;
+    top: 40px;
+    right: -20px;
+    width: 75px;
+
+
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      top: 60px;
+      right: 0;
+    }
   }
+
+  & .privacy-decoration {
+    top: -25px;
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      top: -75px;
+      right: 0;
+    }
+
+    @media only screen and (min-width: 992px) {
+      width: auto;
+      top: -75px;
+      right: 0;
+    }
+  }
+
 }
 
 .change-bg {
   background-color: var(--color-secondary-background);
+}
+
+.decoration-privacy {
+  position: absolute;
+  left: -125px;
+  top: 250px;
+  display: none;
+
+  @media only screen and (min-width: 992px) {
+    display: block;
+    width: 500px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    width: 600px;
+  }
 }

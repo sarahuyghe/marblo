@@ -3,9 +3,11 @@ header {
 }
 
 .navbar {
+  height: auto;
 
   @media only screen and (min-width: 768px) {
     background-color: transparent;
+    height: 80px;
   }
 
   & img {
@@ -21,7 +23,12 @@ header {
   }
 }
 
+.navbar-toggler-icon {
+  width: 50px;
+}
+
 .navbar-nav {
+  background-color: white;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: var(--color-black);
@@ -29,6 +36,10 @@ header {
   line-height: 18px;
   text-decoration: none;
   align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    background-color: transparent;
+  }
 
 
   @media only screen and (min-width: 992px) {
@@ -60,8 +71,12 @@ header {
 
 .nav-link {
   color: var(--color-black);
-  margin: 0 10px;
+  margin: 0 5px;
   font-weight: 500;
+
+  @media only screen and (min-width: 992px) {
+    margin: 0 10px;
+  }
 }
 
 .nav-link:hover {
@@ -71,21 +86,29 @@ header {
 
 .winkel {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 30px;
   border-radius: 20px;
-  width: 140px;
+  width: 100px;
   height: 40px;
   color: var(--color-white);
+
+  @media only screen and (min-width: 992px) {
+    width: 140px;
+    font-size: 1.4rem;
+
+  }
 }
 
 .lang {
   display: flex;
   width: 30px;
-  margin-left: 20px;
+
+  margin: 10px 0;
 
   @media only screen and (min-width: 768px) {
     flex-direction: column;
+    margin-left: 20px;
   }
 
   @media only screen and (min-width: 1200px) {
