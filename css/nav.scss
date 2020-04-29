@@ -4,10 +4,12 @@ header {
 
 .navbar {
   height: auto;
+  padding: 0;
 
   @media only screen and (min-width: 768px) {
     background-color: transparent;
     height: 80px;
+    padding: unset;
   }
 
   & img {
@@ -21,14 +23,21 @@ header {
       width: 200px;
     }
   }
+
+  & .navbar-toggler-icon {
+    width: 50px;
+  }
+
+
+
 }
 
-.navbar-toggler-icon {
-  width: 50px;
-}
+// .navbar-toggler-icon {
+//   width: 50px;
+// }
 
 .navbar-nav {
-  background-color: white;
+  background-color: var(--color-white);
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: var(--color-black);
@@ -64,7 +73,7 @@ header {
 }
 
 .bg-navbar {
-  background-color: white;
+  background-color: var(--color-white);
   transition: all 0.5s;
   padding: 0;
 }
@@ -178,5 +187,4 @@ header {
 .navbar-brand {
   width: 60px;
   padding: 10px;
-
 }
