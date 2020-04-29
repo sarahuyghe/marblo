@@ -36,7 +36,7 @@ header {
     width: 100px; }
     @media only screen and (min-width: 768px) {
       .navbar img {
-        width: 100px; } }
+        width: 150px; } }
     @media only screen and (min-width: 1200px) {
       .navbar img {
         width: 200px; } }
@@ -331,7 +331,7 @@ h1 {
 
 h1::after {
   content: "";
-  width: 280px;
+  width: 150px;
   height: 27px;
   position: absolute;
   top: 100%;
@@ -440,7 +440,9 @@ main section {
   width: contain; }
 
 .carousel-indicators {
-  display: flex;
+  display: block;
+  margin: 0 0 30px 0;
+  text-align: center !important;
   flex-direction: row;
   position: relative;
   justify-content: space-between;
@@ -470,10 +472,14 @@ main section {
   height: auto;
   opacity: 1;
   text-align: center;
-  text-indent: 0; }
+  text-indent: 0;
+  display: inline-block;
+  padding: 0;
+  width: auto; }
   @media only screen and (min-width: 768px) {
     .carousel-indicators li {
-      width: 150px; } }
+      width: 150px;
+      margin: 5px 0; } }
   @media only screen and (min-width: 992px) {
     .carousel-indicators li {
       text-indent: 0;
