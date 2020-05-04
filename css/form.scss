@@ -3,6 +3,7 @@
 }
 
 .form-row {
+
   @media only screen and (min-width: 992px) {
     margin-top: 18px;
   }
@@ -11,10 +12,15 @@
 .form-group {
   margin-top: 18px;
 
+  & span {
+    color: var(--color-accent)
+  }
+
   @media only screen and (min-width: 992px) {
     margin-top: 0;
   }
 }
+
 
 .form-group label {
   font-family: "Quicksand", sans-serif;
@@ -51,13 +57,9 @@
   opacity: 1;
 }
 
-.form-check input[type="checkbox"]:focus+label::before {
-  outline: #807968 auto 2px;
-}
 
 .form-check label {
   font-weight: normal;
-  // padding-left: 20px;
   position: relative;
   padding-left: 40px;
   font-size: 1.2rem;
@@ -89,7 +91,6 @@
 .form-check label::before {
   height: 30px;
   width: 30px;
-
   border: 1px solid #F8F0E2;
   border-radius: 5px;
   background: rgba(248, 240, 226, 0.33);
@@ -103,10 +104,8 @@
 }
 
 .form-check label:after {
-
   background-image: url(./../assets/checkForm.svg);
   background-repeat: no-repeat;
-
   position: absolute;
   left: 7.5px;
   width: 15px;
@@ -130,6 +129,42 @@ textarea:focus {
   font-weight: 700;
 }
 
+.form-control:focus {
+  border-color: #807968;
+  outline: none !important;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
+  background: rgba(248, 240, 226, 0.66);
+  font-weight: 700;
+}
+
+.error-handling {
+  display: none;
+}
+
+.error {
+  & p {
+    text-align: right;
+    color: var(--color-accent);
+    font-size: .9rem;
+    line-height: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: .5rem;
+    padding-right: 15px;
+    display: block;
+  }
+
+  & label {
+    color: var(--color-accent);
+  }
+
+  & input[type="text"],
+  input[type="checkbox"],
+  textarea {
+    border-color: var(--color-accent);
+
+  }
+}
 
 
 ::placeholder {

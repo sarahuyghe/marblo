@@ -5,11 +5,16 @@ header {
 .navbar {
   height: auto;
   padding: 0;
+  background-color: var(--color-white);
+  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
 
   @media only screen and (min-width: 768px) {
     background-color: transparent;
-    height: 80px;
+    height: 90px;
     padding: unset;
+    box-shadow: unset;
   }
 
   & img {
@@ -20,21 +25,21 @@ header {
     }
 
     @media only screen and (min-width: 1200px) {
-      width: 200px;
+      width: 180px;
+      margin: 20px 0;
     }
   }
 
   & .navbar-toggler-icon {
     width: 50px;
   }
-
-
-
 }
 
-// .navbar-toggler-icon {
-//   width: 50px;
-// }
+.navbar-toggler:focus {
+  outline: 0 none;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
+}
+
 
 .navbar-nav {
   background-color: var(--color-white);
@@ -67,8 +72,11 @@ header {
 
   & .active {
     color: var(--color-accent);
-    border-bottom: var(--color-accent) solid 2px;
     padding-bottom: 8px;
+
+    @media only screen and (min-width: 768px) {
+      border-bottom: var(--color-accent) solid 2px;
+    }
   }
 }
 
@@ -76,52 +84,70 @@ header {
   background-color: var(--color-white);
   transition: all 0.5s;
   padding: 0;
+  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
 }
+
+
+
+
 
 .nav-link {
   color: var(--color-black);
   margin: 0 5px;
   font-weight: 500;
+  transition: all 0.5s;
+  padding: 10px 0;
 
   @media only screen and (min-width: 992px) {
     margin: 0 10px;
+    padding: unset;
   }
 }
 
 .nav-link:hover {
   color: var(--color-accent);
-  transition: all 0.5s;
 }
 
-.winkel {
+.nav-item .winkel {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 30px;
   border-radius: 20px;
-  width: 100px;
+
   height: 40px;
   color: var(--color-white);
+  padding: 0 25px;
+  align-self: center;
+
+  @media only screen and (min-width: 768px) {
+    width: 120px;
+    // padding: 0 35px;
+  }
 
   @media only screen and (min-width: 992px) {
     width: 140px;
     font-size: 1.4rem;
-
   }
 }
+
 
 .lang {
   display: flex;
   width: 30px;
-
   margin: 10px 0;
 
   @media only screen and (min-width: 768px) {
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
+    margin-right: 40px;
+    margin-left: 20px;
   }
 }
 
@@ -131,10 +157,11 @@ header {
   line-height: 15px;
   color: #a6a69e;
   padding: 0 2px;
+  transition: all 0.5s;
 
   &:hover {
     color: var(--color-black);
-    transition: all 0.5s;
+
   }
 
   &.activeLang {
@@ -159,9 +186,13 @@ header {
 }
 
 .hide {
-  visibility: hidden;
   padding-left: 25px;
   padding: 5px;
+
+  @media only screen and (min-width: 768px) {
+    visibility: hidden;
+
+  }
 }
 
 .fadeIn {

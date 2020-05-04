@@ -26,12 +26,17 @@ header {
 
 .navbar {
   height: auto;
-  padding: 0; }
+  padding: 0;
+  background-color: var(--color-white);
+  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34); }
   @media only screen and (min-width: 768px) {
     .navbar {
       background-color: transparent;
-      height: 80px;
-      padding: unset; } }
+      height: 90px;
+      padding: unset;
+      box-shadow: unset; } }
   .navbar img {
     width: 100px; }
     @media only screen and (min-width: 768px) {
@@ -39,9 +44,14 @@ header {
         width: 125px; } }
     @media only screen and (min-width: 1200px) {
       .navbar img {
-        width: 200px; } }
+        width: 180px;
+        margin: 20px 0; } }
   .navbar .navbar-toggler-icon {
     width: 50px; }
+
+.navbar-toggler:focus {
+  outline: 0 none;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0); }
 
 .navbar-nav {
   background-color: var(--color-white);
@@ -65,36 +75,47 @@ header {
     padding-right: 20px; }
   .navbar-nav .active {
     color: var(--color-accent);
-    border-bottom: var(--color-accent) solid 2px;
     padding-bottom: 8px; }
+    @media only screen and (min-width: 768px) {
+      .navbar-nav .active {
+        border-bottom: var(--color-accent) solid 2px; } }
 
 .bg-navbar {
   background-color: var(--color-white);
   transition: all 0.5s;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34); }
 
 .nav-link {
   color: var(--color-black);
   margin: 0 5px;
-  font-weight: 500; }
+  font-weight: 500;
+  transition: all 0.5s;
+  padding: 10px 0; }
   @media only screen and (min-width: 992px) {
     .nav-link {
-      margin: 0 10px; } }
+      margin: 0 10px;
+      padding: unset; } }
 
 .nav-link:hover {
-  color: var(--color-accent);
-  transition: all 0.5s; }
+  color: var(--color-accent); }
 
-.winkel {
+.nav-item .winkel {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 30px;
   border-radius: 20px;
-  width: 100px;
   height: 40px;
-  color: var(--color-white); }
+  color: var(--color-white);
+  padding: 0 25px;
+  align-self: center; }
+  @media only screen and (min-width: 768px) {
+    .nav-item .winkel {
+      width: 120px; } }
   @media only screen and (min-width: 992px) {
-    .winkel {
+    .nav-item .winkel {
       width: 140px;
       font-size: 1.4rem; } }
 
@@ -105,20 +126,23 @@ header {
   @media only screen and (min-width: 768px) {
     .lang {
       flex-direction: column;
-      margin-left: 20px; } }
+      margin-left: 10px;
+      margin-right: 10px; } }
   @media only screen and (min-width: 1200px) {
     .lang {
-      flex-direction: row; } }
+      flex-direction: row;
+      margin-right: 40px;
+      margin-left: 20px; } }
 
 .lang li {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   line-height: 15px;
   color: #a6a69e;
-  padding: 0 2px; }
+  padding: 0 2px;
+  transition: all 0.5s; }
   .lang li:hover {
-    color: var(--color-black);
-    transition: all 0.5s; }
+    color: var(--color-black); }
   .lang li.activeLang {
     color: var(--color-black); }
 
@@ -137,9 +161,11 @@ header {
   height: 6px; }
 
 .hide {
-  visibility: hidden;
   padding-left: 25px;
   padding: 5px; }
+  @media only screen and (min-width: 768px) {
+    .hide {
+      visibility: hidden; } }
 
 .fadeIn {
   -webkit-animation: animat_show 1.5s;
@@ -168,6 +194,8 @@ header {
 
 .form-group {
   margin-top: 18px; }
+  .form-group span {
+    color: var(--color-accent); }
   @media only screen and (min-width: 992px) {
     .form-group {
       margin-top: 0; } }
@@ -200,9 +228,6 @@ header {
 
 .form-check input[type="checkbox"]:checked + label::after {
   opacity: 1; }
-
-.form-check input[type="checkbox"]:focus + label::before {
-  outline: #807968 auto 2px; }
 
 .form-check label {
   font-weight: normal;
@@ -260,6 +285,35 @@ textarea:focus {
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
   background: rgba(248, 240, 226, 0.66);
   font-weight: 700; }
+
+.form-control:focus {
+  border-color: #807968;
+  outline: none !important;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
+  background: rgba(248, 240, 226, 0.66);
+  font-weight: 700; }
+
+.error-handling {
+  display: none; }
+
+.error p {
+  text-align: right;
+  color: var(--color-accent);
+  font-size: .9rem;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: .5rem;
+  padding-right: 15px;
+  display: block; }
+
+.error label {
+  color: var(--color-accent); }
+
+.error input[type="text"],
+.error input[type="checkbox"],
+.error textarea {
+  border-color: var(--color-accent); }
 
 ::placeholder {
   color: rgba(171, 161, 138, 0.5); }
@@ -375,9 +429,15 @@ body {
   background-color: var(--color-white);
   color: var(--color-primary); }
 
+main {
+  overflow: hidden; }
+
 main section {
   padding: 40px 20px; }
   @media only screen and (min-width: 768px) {
+    main section {
+      padding: 90px 0; } }
+  @media only screen and (min-width: 992px) {
     main section {
       padding: 134px 0; } }
 
@@ -394,7 +454,8 @@ main section {
   border-radius: 50%;
   opacity: 1;
   margin-top: 0px;
-  position: absolute; }
+  position: absolute;
+  transition: all 0.5s; }
   @media only screen and (min-width: 768px) {
     .carousel-control-next,
     .carousel-control-prev {
@@ -404,8 +465,8 @@ main section {
 
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
-  transform: scale(1);
-  transition: all 0.5s; }
+  transform: scale(1.1);
+  background-color: var(--color-accent); }
 
 .carousel-control-next {
   margin-right: 30px; }
@@ -475,13 +536,18 @@ main section {
   text-indent: 0;
   display: inline-block;
   padding: 0;
-  width: auto; }
+  width: auto;
+  transition: all 0.5s; }
   @media only screen and (min-width: 768px) {
     .carousel-indicators li {
-      width: 150px;
-      margin: 5px 0; } }
+      text-indent: 0;
+      display: inline-block;
+      width: auto;
+      white-space: nowrap;
+      margin: 5px 10px; } }
   @media only screen and (min-width: 992px) {
     .carousel-indicators li {
+      margin: 5px unset;
       text-indent: 0;
       display: inline-block;
       width: auto;
@@ -491,13 +557,12 @@ main section {
   .carousel-indicators li:hover {
     font-size: 3.5rem;
     line-height: 6rem;
-    color: var(--color-primary);
-    transition: all 0.5s; } }
+    color: var(--color-primary); } }
 
 .carousel-indicators .active {
   font-size: 2rem;
   line-height: 25px;
-  color: var(--color-primary); }
+  color: var(--color-accent); }
   @media only screen and (min-width: 992px) {
     .carousel-indicators .active {
       font-size: 4rem;
@@ -512,10 +577,10 @@ main section {
   .assortiment li {
     color: var(--color-secondary);
     font-size: 2rem;
-    line-height: 25px; }
-  .assortiment li:hover {
-    font-size: 3rem;
+    line-height: 25px;
     transition: all 0.5s; }
+  .assortiment li:hover {
+    font-size: 3rem; }
 
 .brushTitel {
   display: inline-block;
@@ -614,12 +679,13 @@ main section {
     @media only screen and (min-width: 992px) {
       .banner .decorationImg {
         padding: 0;
-        display: block; } }
+        display: block;
+        width: 750px; } }
   .banner .logoBanner {
     width: 200px; }
     @media only screen and (min-width: 768px) {
       .banner .logoBanner {
-        width: 350px; } }
+        width: 300px; } }
     @media only screen and (min-width: 992px) {
       .banner .logoBanner {
         width: 400px; } }
@@ -704,10 +770,16 @@ iframe {
   height: 50px;
   width: 50px;
   padding: 15px;
-  display: none; }
+  display: none;
+  cursor: pointer;
+  transition: 0.5s all; }
   @media only screen and (min-width: 768px) {
     .toTop {
       display: inline-block; } }
+
+.toTop:hover {
+  transform: scale(1.1);
+  background-color: var(--color-accent); }
 
 footer {
   background-image: url(./../assets/bg-footer.png);
@@ -736,28 +808,38 @@ footer {
     padding: 100px 20px; }
     @media only screen and (min-width: 768px) {
       footer .footer-info {
-        padding: 200px 0 100px; } }
+        padding: 200px 0 100px; }
+        footer .footer-info p,
+        footer .footer-info a {
+          font-size: 1.6rem; } }
     footer .footer-info div {
       padding-top: 20px; }
 
 .digital {
   background-color: var(--color-white);
   color: var(--color-secondary);
-  height: 50px;
-  font-weight: var(--weight-regular);
-  padding-top: 5px; }
-  @media only screen and (min-width: 768px) {
-    .digital {
-      padding-top: 15px; } }
+  height: 35px;
+  font-weight: var(--weight-regular); }
+  .digital p,
+  .digital a {
+    font-size: 1.4rem; }
+  .digital .container {
+    padding: 5px 0; }
+    @media only screen and (min-width: 768px) {
+      .digital .container {
+        padding: 10px 0; } }
   .digital a {
     color: var(--color-secondary);
     text-decoration: underline; }
 
+.winkel,
+.submit {
+  transition: all 1s; }
+
 .winkel:hover,
 .submit:hover {
   background-color: var(--color-black);
-  color: var(--color-white);
-  transition: all 1s; }
+  color: var(--color-white); }
 
 .timeline-item {
   margin: 10px 0; }
@@ -830,7 +912,7 @@ footer {
     position: absolute;
     display: none;
     right: 0;
-    top: -300px;
+    top: -385px;
     z-index: -1; }
     @media only screen and (min-width: 992px) {
       .decoration .carrots {
@@ -855,13 +937,16 @@ footer {
     @media only screen and (min-width: 768px) {
       .decoration .leaf {
         width: auto;
-        top: 100px;
+        top: 20px;
         left: 0; } }
+    @media only screen and (min-width: 992px) {
+      .decoration .leaf {
+        top: 100px; } }
   .decoration .peppercorns {
     position: absolute;
     display: none;
     right: 0;
-    top: -350px;
+    top: -335px;
     z-index: 1; }
     @media only screen and (min-width: 768px) {
       .decoration .peppercorns {
@@ -869,7 +954,8 @@ footer {
         width: 650px; } }
     @media only screen and (min-width: 1200px) {
       .decoration .peppercorns {
-        width: fit-content; } }
+        width: fit-content;
+        top: -370px; } }
   .decoration .redPepper {
     position: absolute;
     display: block;
@@ -921,5 +1007,8 @@ footer {
   @media only screen and (min-width: 1200px) {
     .decoration-privacy {
       width: 600px; } }
+
+.benefits h1 {
+  margin-bottom: 80px; }
 
 /*# sourceMappingURL=style.css.map */

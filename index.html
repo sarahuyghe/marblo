@@ -15,9 +15,9 @@
 
 <body data-spy="scroll" data-target=".navbar">
   <header>
-    <nav class="navbar  navbar-expand-md  fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-md  fixed-top" id="navbar">
       <!-- <div class="collapse navbar-collapse"> -->
-      <img src="./assets/logo.png" alt="logo marblo" width="200" class="navbar-brand hide" id="logo">
+      <img src="./assets/logo.png" alt="logo marblo" width="180" class="navbar-brand hide" id="logo">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
         aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
         <img class="navbar-toggler-icon" src="./assets/icon-menu.svg" alt="hamburger icon" width="10">
@@ -162,7 +162,7 @@
     </section>
     <img src="./assets/Bottom.png" alt="paint brush" class="brush-border">
     <section id="voordelen">
-      <div class="container">
+      <div class="container benefits">
         <div class="text-md-left text-center">
           <h1>Enkele interessante voordelen</h1>
         </div>
@@ -228,44 +228,51 @@
         </div>
         <form action="" class="justify-content-center">
           <div class="form-row justify-content-center">
-            <div class="form-group col-lg-4 col-10">
-              <label for="">Volledige naam</label>
-              <input type="text" placeholder="Tim Camerlinckx" class="form-control">
+            <div class="form-group col-lg-4 col-10 error">
+              <label for="">Volledige naam <span>*</span></label>
+              <input type="text" placeholder="Tim Camerlinckx" class="form-control" required>
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
             <div class="form-group col-lg-4 col-md-offset-2 col-10">
               <label for="">Firma</label>
               <input type="text" class="form-control">
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
           </div>
           <div class="form-row justify-content-center">
             <div class="form-group col-lg-4 col-10">
-              <label for="">E-mailadres</label>
+              <label for="">E-mailadres <span>*</span></label>
               <input type="text" placeholder="e.g. jan@website.com" class="form-control">
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
             <div class="form-group col-lg-4 col-md-offset-2 col-10">
-              <label for="">Telefoonnummer</label>
+              <label for="">Telefoonnummer <span>*</span></label>
               <input type="text" placeholder="e.g. 056 98 02 60" class="form-control">
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
           </div>
           <div class="form-row justify-content-center">
             <div class="form-group col-lg-4 col-10">
-              <label for="">Straatnaam + huisnummer</label>
+              <label for="">Straatnaam + huisnummer <span>*</span></label>
               <input type="text" placeholder="e.g. Eugène Bekaertlaan 57" class="form-control">
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
             <div class="form-group col-lg-4 col-md-offset-2 col-10">
-              <label for="">Postcode + Gemeente</label>
+              <label for="">Postcode + Gemeente <span>*</span></label>
               <input type="text" placeholder="e.g. 8790 Waregem" class="form-control">
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
           </div>
           <div class="form-row justify-content-center">
             <div class="form-group col-lg-8 col-10">
               <label for="">Uw bericht</label>
               <textarea name="" id="" class="form-control" rows="4" placeholder="Typ hier uw bericht"></textarea>
+              <p class="error-handling">Dit is een verplicht veld</p>
             </div>
           </div>
           <div class="form-row justify-content-center align-items-center">
             <div class="form-group col-lg-6 col-10 form-check">
-              <input type="checkbox" class=" form-check-input" id="customCheck">
+              <input type="checkbox" class="form-check-input" id="customCheck">
               <label for="customCheck" class="form-check-label ">Ik heb het <a
                   href="https://www.willynaessens.be/nl/disclaimer/">privacybeleid</a> gelezen en ga
                 akkoord</label>
