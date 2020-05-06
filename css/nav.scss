@@ -6,9 +6,9 @@ header {
   height: auto;
   padding: 0;
   background-color: var(--color-white);
-  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 
   @media only screen and (min-width: 768px) {
     background-color: transparent;
@@ -84,9 +84,9 @@ header {
   background-color: var(--color-white);
   transition: all 0.5s;
   padding: 0;
-  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 

@@ -28,9 +28,9 @@ header {
   height: auto;
   padding: 0;
   background-color: var(--color-white);
-  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34); }
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1); }
   @media only screen and (min-width: 768px) {
     .navbar {
       background-color: transparent;
@@ -84,9 +84,9 @@ header {
   background-color: var(--color-white);
   transition: all 0.5s;
   padding: 0;
-  -webkit-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34);
-  box-shadow: -1px 6px 17px 3px rgba(0, 0, 0, 0.34); }
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1); }
 
 .nav-link {
   color: var(--color-black);
@@ -188,9 +188,16 @@ header {
 .message {
   height: 150px; }
 
-@media only screen and (min-width: 992px) {
-  .form-row {
-    margin-top: 18px; } }
+.form-row {
+  margin-right: -15px;
+  margin-left: -15px; }
+  .form-row > .col,
+  .form-row > [class*=col-] {
+    padding-right: 15px;
+    padding-left: 15px; }
+  @media only screen and (min-width: 992px) {
+    .form-row {
+      margin-top: 18px; } }
 
 .form-group {
   margin-top: 18px; }
@@ -565,11 +572,8 @@ main section {
   color: var(--color-accent); }
   @media only screen and (min-width: 992px) {
     .carousel-indicators .active {
-      font-size: 4rem;
-      line-height: 6rem; } }
-  @media only screen and (min-width: 1200px) {
-    .carousel-indicators .active {
-      font-size: 4.8rem;
+      color: var(--color-primary);
+      font-size: 3.5rem;
       line-height: 6rem; } }
 
 .assortiment {

@@ -3,6 +3,14 @@
 }
 
 .form-row {
+  margin-right: -15px;
+  margin-left: -15px;
+
+  & > .col, 
+  & > [class*=col-] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
   @media only screen and (min-width: 992px) {
     margin-top: 18px;
