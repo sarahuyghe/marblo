@@ -971,13 +971,12 @@ footer {
     position: absolute;
     display: block;
     right: 0;
-    top: 40px;
-    right: -20px;
+    top: -20px;
     width: 75px; }
     @media only screen and (min-width: 768px) {
       .decoration .onion {
         width: auto;
-        top: 60px;
+        top: -75px;
         right: 0; } }
   .decoration .privacy-decoration {
     top: -25px; }
