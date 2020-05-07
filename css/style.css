@@ -441,7 +441,8 @@ body {
   color: var(--color-primary); }
 
 main {
-  overflow: hidden; }
+  overflow: hidden;
+  scroll-behavior: smooth; }
 
 main section {
   padding: 40px 20px; }

@@ -11,6 +11,7 @@ body {
 
 main {
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 main section {
@@ -163,11 +164,12 @@ main section {
   font-size: 2rem;
   line-height: 25px;
   color: var(--color-accent);
-	@media only screen and (min-width: 992px) {
-		color: var(--color-primary);
-		font-size: 3.5rem;
-		line-height: 6rem;
-	}
+
+  @media only screen and (min-width: 992px) {
+    color: var(--color-primary);
+    font-size: 3.5rem;
+    line-height: 6rem;
+  }
 }
 
 .assortiment {
