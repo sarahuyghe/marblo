@@ -25,13 +25,13 @@ header {
   transition: all 0.5s; }
 
 .navbar {
-  height: auto;
+  height: fit-content;
   padding: 0;
   background-color: var(--color-white);
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1); }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     .navbar {
       background-color: transparent;
       height: 90px;
@@ -78,7 +78,9 @@ header {
     padding-bottom: 8px; }
     @media only screen and (min-width: 768px) {
       .navbar-nav .active {
-        border-bottom: var(--color-accent) solid 2px; } }
+        border-bottom: var(--color-accent) solid 2px;
+        padding: unset;
+        padding: 5px 0; } }
 
 .bg-navbar {
   background-color: var(--color-white);
@@ -93,11 +95,13 @@ header {
   margin: 0 5px;
   font-weight: 500;
   transition: all 0.5s;
-  padding: 10px 0; }
+  padding: 10px 0;
+  line-height: 18px; }
   @media only screen and (min-width: 992px) {
     .nav-link {
       margin: 0 10px;
-      padding: unset; } }
+      padding: 0;
+      border-bottom: 3px solid transparent; } }
 
 .nav-link:hover {
   color: var(--color-accent); }
@@ -105,7 +109,7 @@ header {
 .nav-item .winkel {
   font-weight: 700;
   font-size: 1.2rem;
-  line-height: 30px;
+  line-height: 40px;
   border-radius: 20px;
   height: 40px;
   color: var(--color-white);

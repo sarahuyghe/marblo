@@ -3,14 +3,14 @@ header {
 }
 
 .navbar {
-  height: auto;
+  height: fit-content;
   padding: 0;
   background-color: var(--color-white);
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     background-color: transparent;
     height: 90px;
     padding: unset;
@@ -76,6 +76,8 @@ header {
 
     @media only screen and (min-width: 768px) {
       border-bottom: var(--color-accent) solid 2px;
+      padding: unset;
+      padding: 5px 0;
     }
   }
 }
@@ -89,20 +91,19 @@ header {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
 .nav-link {
   color: var(--color-black);
   margin: 0 5px;
   font-weight: 500;
   transition: all 0.5s;
   padding: 10px 0;
+  line-height: 18px;
+
 
   @media only screen and (min-width: 992px) {
     margin: 0 10px;
-    padding: unset;
+    padding: 0;
+    border-bottom: 3px solid transparent;
   }
 }
 
@@ -113,7 +114,7 @@ header {
 .nav-item .winkel {
   font-weight: 700;
   font-size: 1.2rem;
-  line-height: 30px;
+  line-height: 40px;
   border-radius: 20px;
 
   height: 40px;
