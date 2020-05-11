@@ -2,7 +2,7 @@
   const $topButton = document.querySelector("#toTop")
   const $nav = document.querySelector('.navbar')
   const $logo = document.querySelector('#logo')
-  const $navLinks = document.querySelectorAll('.nav-link')
+  const $navLinks = document.querySelectorAll('.scroll')
 
   const scrollFunction = () => {
     const y = window.scrollY;
